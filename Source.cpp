@@ -37,6 +37,12 @@ int main() {
 				cout << "\n\nEnterrel tud visszalépni a fõmenübe!\n";
 				getchar();
 			}
+			if (s.compare("U") == 0) {
+				system("cls");
+				cout << "A játék során használhat segítségeket melyek a következõk:\n\nKözönség segítség: a 'K' betû válaszmegadással lehet kérvényezni a közönség\nsegítségét amely százalékos arányban meg fogja adni, hogy ki mire szavazott,\ns milyen arányban.\n\nTelefonos segítség: a telefonos segítséget a 'T' betû válaszmegadással lehet\nalkalmazni, ekkor megadhatja, hogy kit akar felhívni, s utána a kívánt személy\nmegadja az általa vélt helyes válasz betûjelét.\n\nFelezés segítség: az 'F' betû válaszmegadással tudja kérni ezt a segítséget\namely után, a négy féle válaszlehetõségbõl kettõ lesz. Magyarán mondva lefelezi.\n";
+				cout << "Az útmutató vége!\nEnterrel tud visszalépni a fõmenübe!\n";
+				getchar();
+			}
 	}
 	
 	
