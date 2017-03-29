@@ -43,6 +43,7 @@ int main() {
 				cout << "Az útmutató vége!\nEnterrel tud visszalépni a fõmenübe!\n";
 				getchar();
 			}
+			if (s.compare("K") == 0) { cout << "Viszlát!\n"; kilep = 2; }
 	}
 	
 	
