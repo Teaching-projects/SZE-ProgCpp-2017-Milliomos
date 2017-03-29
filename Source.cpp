@@ -11,10 +11,19 @@
 #include "magyarit.h"
 
 using namespace std;
-#define MAX 512
+#define N 10
+#define MAX 1280
+#define NEVMAX 32
+
+struct toplista {
+	char nev[NEVMAX];
+	int nyeremeny;
+	double ido;
+
+}adatok[N];
 
 int main() {
-	int kilep = 0, ok;
+	int kilep = 0, ok, i, rangsordb = 0;
 	
 	std::string s;
 	
@@ -44,6 +53,17 @@ int main() {
 				getchar();
 			}
 			if (s.compare("K") == 0) { cout << "Viszlát!\n"; kilep = 2; }
+			if (s.compare("T") == 0) {
+				system("cls");
+				for (i = 0; i<rangsordb; i++) {
+					cout << "%d.\t%-10s\t\t%-20dFT\t\t%0.f\n", i + 1, adatok[i].nev, adatok[i].nyeremeny, adatok[i].ido;
+
+					
+				}
+				cout << "A toplista vége!\nEnterrel tud visszalépni a fõmenübe!\n";
+
+				getchar();
+			}
 	}
 	
 	
