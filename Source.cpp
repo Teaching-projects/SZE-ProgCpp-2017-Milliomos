@@ -9,11 +9,13 @@
 #include <istream>
 #include <fstream>
 #include "magyarit.h"
+#include "sleep.h"
 #include "lista.h"
 #include <vector>
 #include <cstring>
 #include <sstream>
 #include <list>
+#include <iomanip>
 
 using namespace std;
 #define N 10
@@ -171,12 +173,33 @@ int main() {
 					conductor = conductor->next;
 					i++;
 				}
+				system("cls");
 				cout << "A kérdés témaköre: " << conductor->kategoria << "\n\n" ;
-				cout << conductor->nehez << ". " << conductor->kerdes << "\n(A) " << conductor->a << "(B)" << conductor->b <<
-					"\n(C) " << conductor->c << "(D)" << conductor->d;
+				cout << conductor->nehez << ". " << conductor->kerdes << "\n(A) " << setw(30) << left << conductor->a << "(B)" << conductor->b <<
+					"\n(C) " << setw(30) << left << conductor->c << "(D)" << conductor->d;
 				cout << "\n";
 
-				std::getline(std::cin, s); //WORK
+				do {
+					ok = 1;
+					cout << "Adja meg a helyes választ:\n";
+					std::getline(std::cin, s);
+					s[0] = toupper(s[0]);
+					if ((s.compare("A") != 0) && (s.compare("B") != 0) && (s.compare("C") != 0) && (s.compare("D") != 0)&& (s.compare("O") != 0)) {
+						cout << "Helytelen karakter!\n";
+						ok = 0;
+					}
+				} while (!ok);
+
+				if ((s.compare(conductor->valasz) != 0) && (s.compare("O") != 0)) {
+					cout << "A helyes válasz: " <<conductor->valasz <<" lett volna!\n";
+					//Az eddig nyereménye
+					vege = 1;
+					}
+				else {
+					cout << "Eltaláltad a helyes választ!\n"; //Majd ide a nyereményt még
+					sleep(2);
+						}
+
 
 				if (nehezseg == 15) {
 					cout << "Gratulálok " << nev <<  " megnyerted a játékot!\n";
