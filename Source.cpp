@@ -159,6 +159,8 @@ int main() {
 				ok = 1;
 				cout << "Adjon meg egy nevet:\n";
 				std::getline(std::cin, nev);
+				cout << "\n" << nev << " Legyen ön is milliomos!\n\n";
+				sleep(2);
 			} while (!ok);
 			int vege = 0, nehezseg = 1;
 			int fix = 0, koz = 95, tele = 150;
