@@ -17,43 +17,69 @@
 #include <list>
 #include <iomanip>
 
+
 using namespace std;
 #define N 10
 #define MAX 512
 #define NEVMAX 32
 
 struct toplista {
-	char nev[NEVMAX];
+	int helyezes;
+	string nev;
 	int nyeremeny;
 	double ido;
 
 }adatok[N];
+void srendez(struct toplista s[], int meret) {
+	struct toplista tmp;
+	int i, j;
+	for (i = 0; i<meret - 1; i++) {
+		for (j = i + 1; j<meret; j++) {
+			if ((s[i].nyeremeny<s[j].nyeremeny)) {
+				tmp = s[i];
+				s[i] = s[j];
+				s[j] = tmp;
+			}
+		}
+	}
+}
+bool is_file_exist(const char *fileName)
+{
+	std::ifstream infile(fileName);
+	return infile.good();
+}
+
+
 
 
 
 int main(int argc, char** argv) {
-	int kilep = 0, ok, i, rangsordb = 0, db = 0,nyeremeny[16]={0,5000,10000,25000,50000,100000,200000,300000,500000,800000,1500000,3000000,5000000,10000000,20000000,40000000};
+	time_t kezdet;
+	time_t veg;
+	struct toplista cs;
+	int kilep = 0, ok, i, j, rangsordb = 0, kk = 0, db = 0, nyeremeny[16] = { 0,5000,10000,25000,50000,100000,200000,300000,500000,800000,1500000,3000000,5000000,10000000,20000000,40000000 };
 	int seged = 1, nehezseg = 1, nehez[16] = { 0 }, nehezsegseged[16] = { 0 }, nehezellseged, nyeremenyjatekos;
+	double tido = 0;
 	std::string s;
 	std::string nev;
 	std::string token;
 	std:string line;
 	node *root;
-	node *conductor; 
+	node *conductor;
 
 	srand(time(NULL));
 	magyarit();
 
 	ifstream myfile("loim.csv");
 	if (myfile.fail()) {
-		cerr << "A fájl nem nyitható meg!";
+		cerr << "A loim.csv fájl nem nyitható meg!";
 		exit(1);
 	}
 	if (myfile.is_open())
 	{
 		while (getline(myfile, line))
 		{
-			if(db==0){
+			if (db == 0) {
 				root = new node;
 				root->next = 0;
 				conductor = root;
@@ -66,8 +92,8 @@ int main(int argc, char** argv) {
 				conductor->next = 0;
 				do {
 					next_token = line.find_first_of(";", cur_token);
-					token = line.substr(cur_token, next_token - cur_token); 
-					if (hanyadik==0) {
+					token = line.substr(cur_token, next_token - cur_token);
+					if (hanyadik == 0) {
 						conductor->nehez = nehezellseged = std::stoi(token);
 						nehezsegseged[nehezellseged]++;
 					}
@@ -94,28 +120,66 @@ int main(int argc, char** argv) {
 					}
 
 					if (next_token != string::npos) {
-						cur_token = next_token + 1; }
+						cur_token = next_token + 1;
+					}
 					hanyadik++;
 				} while (next_token != string::npos);
 				db++;
 
-					}
-				}
+			}
 		}
+	}
 
 	nehez[15] = db;
 	myfile.close();
-	
 
-
-		conductor = root;
-		db = 0;
-		while (conductor) {
-			if (seged<conductor->nehez) {
-				nehez[seged] = db; seged++;
-			}
-			conductor = conductor->next; db++;
+	conductor = root;
+	db = 0;
+	while (conductor) {
+		if (seged<conductor->nehez) {
+			nehez[seged] = db; seged++;
 		}
+		conductor = conductor->next; db++;
+	}
+
+	if (!is_file_exist("toplista.txt")) {
+		ofstream top("toplista.txt");
+		top.close();
+	}
+	ifstream toplista("toplista.txt");
+	if (toplista.fail()) {
+		cerr << "A toplista.txt fájl nem nyitható meg!";
+		exit(1);
+	}
+	if (toplista.is_open()) {
+		while (getline(toplista, line))
+		{
+			size_t cur_token = 0, next_token, hanyadik = 0;
+			do {
+				next_token = line.find_first_of("\t", cur_token);
+				token = line.substr(cur_token, next_token - cur_token);
+				
+				if (hanyadik == 0) {
+					adatok[rangsordb].helyezes = std::stoi(token);
+				}
+				else if (hanyadik == 1) {
+					adatok[rangsordb].nev = token;
+				}
+				else if (hanyadik == 2) {
+					adatok[rangsordb].nyeremeny = std::stoi(token);
+				}
+				else if (hanyadik == 3) {
+					adatok[rangsordb].ido = std::stof(token);
+				}
+				if (next_token != string::npos) {
+					cur_token = next_token + 1;
+				}
+				hanyadik++;
+			} while (next_token != string::npos);
+			rangsordb++;
+		}
+	}
+	toplista.close();
 
 	while (kilep != 2) {
 		system("cls");
@@ -176,8 +240,9 @@ int main(int argc, char** argv) {
 					i++;
 				}
 				system("cls");
+				time(&kezdet);
 				if (argc == 2) { if (strcmp(argv[1], "cheat") == 0) { cout << "A helyes valasza: " << conductor->valasz << "\n"; } }
-				cout << "A kérdés témaköre: " << conductor->kategoria << "\n\n" ;				
+				cout << "A kérdés témaköre: " << conductor->kategoria << "\n\n";
 				cout << conductor->nehez << ". " << conductor->kerdes << "\n(A) " << setw(30) << left << conductor->a << "(B)" << conductor->b <<
 					"\n(C) " << setw(30) << left << conductor->c << "(D)" << conductor->d;
 				cout << "\n";
@@ -187,34 +252,74 @@ int main(int argc, char** argv) {
 					cout << "Adja meg a helyes választ:\n";
 					std::getline(std::cin, s);
 					s[0] = toupper(s[0]);
-					if ((s.compare("A") != 0) && (s.compare("B") != 0) && (s.compare("C") != 0) && (s.compare("D") != 0)&& (s.compare("O") != 0)) {
+					if ((s.compare("A") != 0) && (s.compare("B") != 0) && (s.compare("C") != 0) && (s.compare("D") != 0) && (s.compare("O") != 0)) {
 						cout << "Helytelen karakter!\n";
 						ok = 0;
 					}
 				} while (!ok);
 
 				if ((s.compare(conductor->valasz) != 0) && (s.compare("O") != 0)) {
-					if (nehezseg <= 5) { cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << "lett volna!\tA nyereménye: " << nyeremeny[0] << "\n";  nyeremenyjatekos = nyeremeny[0]; sleep(3);}
-					if (nehezseg > 5 && nehezseg < 10) { cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[5] << "\n"; nyeremenyjatekos = nyeremeny[5]; sleep(3);}
-					if (nehezseg > 10 && nehezseg < 15) { cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[10] << "\n"; nyeremenyjatekos = nyeremeny[10]; sleep(3);}
+					if (nehezseg <= 5) { cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[0] << "\n";  nyeremenyjatekos = nyeremeny[0]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
+					if (nehezseg > 5 && nehezseg < 10) { cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[5] << "\n"; nyeremenyjatekos = nyeremeny[5]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
+					if (nehezseg > 10 && nehezseg < 15) { cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[10] << "\n"; nyeremenyjatekos = nyeremeny[10]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
 					//Az eddig nyereménye
 					vege = 1;
-					}
+				}
 				else {
-					cout << "Gratulálunk helyes a válasza!\nEddigi nyereménye: " << nyeremeny[nehezseg] << "\n";			
+					cout << "Gratulálunk helyes a válasza!\nEddigi nyereménye: " << nyeremeny[nehezseg] << "\n";
 					nyeremenyjatekos = nyeremeny[nehezseg];
 					sleep(2);
-					}
+				}
 
 
 				if (nehezseg == 15) {
-					cout << "Gratulálunk " << nev << "ön megnyerte a játek fõdíját ami nem más mint " << nyeremeny[nehezseg] << " FT!\n\n";
+					cout << "Gratulálunk " << nev << " ön megnyerte a játek fõdíját ami nem más mint " << nyeremeny[nehezseg] << " FT!\n\n";
+					time(&veg); tido = difftime(veg, kezdet);
 					nyeremenyjatekos = nyeremeny[nehezseg];
 					vege = 1;
 				}
 
 				nehezseg++;
-			}			
+			}
+			if (rangsordb != 10) {
+				adatok[rangsordb].nev = nev;
+				adatok[rangsordb].nyeremeny = nyeremenyjatekos;
+				adatok[rangsordb].ido = tido;
+				rangsordb++;
+			}
+			else {
+				if (nyeremenyjatekos >= adatok[rangsordb - 1].nyeremeny) {
+					adatok[rangsordb - 1].nev, nev;
+					adatok[rangsordb - 1].nyeremeny = nyeremenyjatekos;
+					adatok[rangsordb - 1].ido = tido;
+				}
+			}
+			ofstream toplista("toplista.txt");
+			if (toplista.fail()) {
+				cerr << "A fájl nem nyitható meg!";
+				exit(1);
+			}
+			srendez(adatok, rangsordb);
+			for (i = 0; i<rangsordb - 1; i++) {
+				for (j = i + 1; j<rangsordb; j++) {
+					if (adatok[i].nyeremeny == adatok[j].nyeremeny) {
+						if (adatok[i].ido>adatok[j].ido) {
+							cs = adatok[i];
+							adatok[i] = adatok[j];
+							adatok[j] = cs;
+						}
+					}
+				}
+			}
+			for (i = 0; i<rangsordb; i++) {
+				toplista << i + 1 << ".";
+				toplista << "\t" << adatok[i].nev << "";
+				toplista << "\t" << adatok[i].nyeremeny << "";
+				toplista << "\t" << adatok[i].ido << "\n";
+			}
+			toplista.close();
+
+
 		}
 	}
 	return 0;
