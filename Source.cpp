@@ -31,9 +31,9 @@ struct toplista {
 
 
 
-int main() {
-	int kilep = 0, ok, i, rangsordb = 0, db = 0;
-	int seged = 1, nehezseg = 1, nehez[16] = { 0 }, nehezsegseged[16] = { 0 }, nehezellseged;
+int main(int argc, char** argv) {
+	int kilep = 0, ok, i, rangsordb = 0, db = 0,nyeremeny[16]={0,5000,10000,25000,50000,100000,200000,300000,500000,800000,1500000,3000000,5000000,10000000,20000000,40000000};
+	int seged = 1, nehezseg = 1, nehez[16] = { 0 }, nehezsegseged[16] = { 0 }, nehezellseged, nyeremenyjatekos;
 	std::string s;
 	std::string nev;
 	std::string token;
@@ -105,7 +105,7 @@ int main() {
 
 	nehez[15] = db;
 	myfile.close();
-
+	
 
 
 		conductor = root;
@@ -176,7 +176,8 @@ int main() {
 					i++;
 				}
 				system("cls");
-				cout << "A kérdés témaköre: " << conductor->kategoria << "\n\n" ;
+				if (argc == 2) { if (strcmp(argv[1], "cheat") == 0) { cout << "A helyes valasza: " << conductor->valasz << "\n"; } }
+				cout << "A kérdés témaköre: " << conductor->kategoria << "\n\n" ;				
 				cout << conductor->nehez << ". " << conductor->kerdes << "\n(A) " << setw(30) << left << conductor->a << "(B)" << conductor->b <<
 					"\n(C) " << setw(30) << left << conductor->c << "(D)" << conductor->d;
 				cout << "\n";
@@ -193,27 +194,28 @@ int main() {
 				} while (!ok);
 
 				if ((s.compare(conductor->valasz) != 0) && (s.compare("O") != 0)) {
-					cout << "A helyes válasz: " <<conductor->valasz <<" lett volna!\n";
+					if (nehezseg <= 5) { cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << "lett volna!\tA nyereménye: " << nyeremeny[0] << "\n";  nyeremenyjatekos = nyeremeny[0]; sleep(3);}
+					if (nehezseg > 5 && nehezseg < 10) { cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[5] << "\n"; nyeremenyjatekos = nyeremeny[5]; sleep(3);}
+					if (nehezseg > 10 && nehezseg < 15) { cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[10] << "\n"; nyeremenyjatekos = nyeremeny[10]; sleep(3);}
 					//Az eddig nyereménye
 					vege = 1;
 					}
 				else {
-					cout << "Eltaláltad a helyes választ!\n"; //Majd ide a nyereményt még
+					cout << "Gratulálunk helyes a válasza!\nEddigi nyereménye: " << nyeremeny[nehezseg] << "\n";			
+					nyeremenyjatekos = nyeremeny[nehezseg];
 					sleep(2);
-						}
+					}
 
 
 				if (nehezseg == 15) {
-					cout << "Gratulálok " << nev <<  " megnyerted a játékot!\n";
+					cout << "Gratulálunk " << nev << "ön megnyerte a játek fõdíját ami nem más mint " << nyeremeny[nehezseg] << " FT!\n\n";
+					nyeremenyjatekos = nyeremeny[nehezseg];
 					vege = 1;
 				}
 
 				nehezseg++;
-			}
-			
+			}			
 		}
-
-		return 0;
 	}
-
+	return 0;
 }
