@@ -1,4 +1,4 @@
-ï»¿#include <iostream>
+#include <iostream>
 #include <string>
 #include <stdio.h>
 #include <string.h>
@@ -72,7 +72,7 @@ int main(int argc, char** argv) {
 
 	ifstream myfile("loim.csv");
 	if (myfile.fail()) {
-		cerr << "A loim.csv fÃ¡jl nem nyithatÃ³ meg!";
+		cerr << "A loim.csv fájl nem nyitható meg!";
 		exit(1);
 	}
 	if (myfile.is_open())
@@ -148,7 +148,7 @@ int main(int argc, char** argv) {
 	}
 	ifstream toplista("toplista.txt");
 	if (toplista.fail()) {
-		cerr << "A toplista.txt fÃ¡jl nem nyithatÃ³ meg!";
+		cerr << "A toplista.txt fájl nem nyitható meg!";
 		exit(1);
 	}
 	if (toplista.is_open()) {
@@ -158,7 +158,7 @@ int main(int argc, char** argv) {
 			do {
 				next_token = line.find_first_of("\t", cur_token);
 				token = line.substr(cur_token, next_token - cur_token);
-
+				
 				if (hanyadik == 0) {
 					adatok[rangsordb].helyezes = std::stoi(token);
 				}
@@ -183,78 +183,38 @@ int main(int argc, char** argv) {
 
 	while (kilep != 2) {
 		system("cls");
-		cout << "\nÃœdvÃ¶zÃ¶ljÃ¼k a Legyen Ã–n is Milliomos jÃ¡tÃ©kban!\n\n";
-		cout << "\n|___Menu ___|\n\nÃšj jÃ¡tÃ©k (J)\nÃštmutatÃ³ jÃ¡tÃ©khoz(U)\nSzabÃ¡lyzat(S)\nToplista(T)\nÃšj KÃ©rdÃ©s felvÃ©tele(F)\nKilÃ©pÃ©s(K)\n";
+		cout << "\nÜdvözöljük a Legyen Ön is Milliomos játékban!\n\n";
+		cout << "\n|___Menu ___|\n\nÚj játék (J)\nÚtmutató játékhoz(U)\nSzabályzat(S)\nToplista(T)\nKilépés(K)\n";
 		do {
 			ok = 1;
 			cout << "\n";
 			std::getline(std::cin, s);
 			char c = s[0];
 			s = toupper(c);
-			if ((s.compare("J") != 0) && (s.compare("S") != 0) && (s.compare("T") != 0) && (s.compare("K") != 0) && (s.compare("F") != 0) && (s.compare("U") != 0)) { cout << "Helytelen Karakter!\n"; ok = 0; }
+			if ((s.compare("J") != 0) && (s.compare("S") != 0) && (s.compare("T") != 0) && (s.compare("K") != 0) && (s.compare("U") != 0)) { cout << "Helytelen Karakter!\n"; ok = 0; }
 		} while (!ok);
 		if (s.compare("S") == 0) {
 			system("cls");
-			cout << "A szÃ©kbe kerÃ¼lÃµ jÃ¡tÃ©kosnak 15 egyre nehezedÃµ kÃ©rdÃ©st tesznek fel.\nA kÃ©rdÃ©sek feleletvÃ¡lasztÃ³sak: nÃ©gy vÃ¡laszlehetÃµsÃ©get is megadnak,\nmelyek kÃ¶zÃ¼l a jÃ¡tÃ©kosnak kell kivÃ¡lasztania a helyeset.\n(A nÃ©gy vÃ¡laszlehetÃµsÃ©get a latin Ã¡bÃ©cÃ© elsÃµ nÃ©gy betÃ»jÃ©vel jelÃ¶lik.)\nAz elsÃµ kÃ©rdÃ©s helyes megvÃ¡laszolÃ¡sÃ¡val a jÃ¡tÃ©kos 5 000 Ft-ot nyer.\nA tÃ¶bbi kÃ©rdÃ©ssel egyre tÃ¶bb pÃ©nzhez jut a jÃ¡tÃ©kos.\nNagyjÃ¡bÃ³l minden kÃ©rdÃ©s utÃ¡n megduplÃ¡zÃ³dik a nyeremÃ©ny.";
-			cout << "\n\nEnterrel tud visszalÃ©pni a fÃµmenÃ¼be!\n";
+			cout << "A székbe kerülõ játékosnak 15 egyre nehezedõ kérdést tesznek fel.\nA kérdések feleletválasztósak: négy válaszlehetõséget is megadnak,\nmelyek közül a játékosnak kell kiválasztania a helyeset.\n(A négy válaszlehetõséget a latin ábécé elsõ négy betûjével jelölik.)\nAz elsõ kérdés helyes megválaszolásával a játékos 5 000 Ft-ot nyer.\nA többi kérdéssel egyre több pénzhez jut a játékos.\nNagyjából minden kérdés után megduplázódik a nyeremény.";
+			cout << "\n\nEnterrel tud visszalépni a fõmenübe!\n";
 			getchar();
 		}
 		if (s.compare("U") == 0) {
 			system("cls");
-			cout << "A jÃ¡tÃ©k sorÃ¡n hasznÃ¡lhat segÃ­tsÃ©geket melyek a kÃ¶vetkezÃµk:\n\nKÃ¶zÃ¶nsÃ©g segÃ­tsÃ©g: a 'K' betÃ» vÃ¡laszmegadÃ¡ssal lehet kÃ©rvÃ©nyezni a kÃ¶zÃ¶nsÃ©g\nsegÃ­tsÃ©gÃ©t amely szÃ¡zalÃ©kos arÃ¡nyban meg fogja adni, hogy ki mire szavazott,\ns milyen arÃ¡nyban.\n\nTelefonos segÃ­tsÃ©g: a telefonos segÃ­tsÃ©get a 'T' betÃ» vÃ¡laszmegadÃ¡ssal lehet\nalkalmazni, ekkor megadhatja, hogy kit akar felhÃ­vni, s utÃ¡na a kÃ­vÃ¡nt szemÃ©ly\nmegadja az Ã¡ltala vÃ©lt helyes vÃ¡lasz betÃ»jelÃ©t.\n\nFelezÃ©s segÃ­tsÃ©g: az 'F' betÃ» vÃ¡laszmegadÃ¡ssal tudja kÃ©rni ezt a segÃ­tsÃ©get\namely utÃ¡n, a nÃ©gy fÃ©le vÃ¡laszlehetÃµsÃ©gbÃµl kettÃµ lesz. MagyarÃ¡n mondva lefelezi.\n";
-			cout << "Az ÃºtmutatÃ³ vÃ©ge!\nEnterrel tud visszalÃ©pni a fÃµmenÃ¼be!\n";
+			cout << "A játék során használhat segítségeket melyek a következõk:\n\nKözönség segítség: a 'K' betû válaszmegadással lehet kérvényezni a közönség\nsegítségét amely százalékos arányban meg fogja adni, hogy ki mire szavazott,\ns milyen arányban.\n\nTelefonos segítség: a telefonos segítséget a 'T' betû válaszmegadással lehet\nalkalmazni, ekkor megadhatja, hogy kit akar felhívni, s utána a kívánt személy\nmegadja az általa vélt helyes válasz betûjelét.\n\nFelezés segítség: az 'F' betû válaszmegadással tudja kérni ezt a segítséget\namely után, a négy féle válaszlehetõségbõl kettõ lesz. Magyarán mondva lefelezi.\n";
+			cout << "Az útmutató vége!\nEnterrel tud visszalépni a fõmenübe!\n";
 			getchar();
 		}
-		if (s.compare("K") == 0) { cout << "ViszlÃ¡t!\n"; kilep = 2; }
+		if (s.compare("K") == 0) { cout << "Viszlát!\n"; kilep = 2; }
 		if (s.compare("T") == 0) {
 			system("cls");
+			cout << "Helyezés" << "\t" << setw(10) << left << "Név" << "\t" << setw(30) << left << "Nyeremény" << "\t" << setw(30) << left << "Idõ" << "\n\n";
 			for (i = 0; i < rangsordb; i++) {
-				cout << "%d.\t%-10s\t\t%-20dFT\t\t%0.f\n", i + 1, adatok[i].nev, adatok[i].nyeremeny, adatok[i].ido;
-
-
+				cout << i+1 << "." << setw(9) << left  <<"\t" << setw(9) << left << adatok[i].nev << "\t" << setw(30) << left  << adatok[i].nyeremeny << "\t" << setw(20) << left << adatok[i].ido << "\n";
 			}
-			cout << "A toplista vÃ©ge!\nEnterrel tud visszalÃ©pni a fÃµmenÃ¼be!\n";
+			cout << "A toplista vége!\nEnterrel tud visszalépni a fõmenübe!\n";
 
 			getchar();
-		}
-		if (s.compare("F") == 0) {
-
-			std::ofstream loimfile;
-
-			loimfile.open("loim.csv", std::ios_base::app);
-			if (loimfile.fail()) {
-				cerr << "A fÃ¡jl nem nyithatÃ³ meg!";
-				exit(1);
-			}
-			cout << "A KÃ©rdÃ©s nehÃ©zsÃ©ge [1-15] kÃ¶zÃ¶ttinek kell lennie, Ha mÃ©gse szeretnek\nÃºj kÃ©rdÃ©st felvenni, akkor nyomja meg az MÃ‰GSE(M)-et.\n";
-			cout << "Ãšj kÃ©rdÃ©s felvÃ©lele: NehÃ©zsÃ©g;KÃ©rdÃ©s;A;B;C;D lehetsÅ‘sÃ©g;Helyes vÃ¡lasz betÅ±jele;Kategoria;\n";
-			cout << "pl:7;Milyen nÃ¶vÃ©nyrÃ©sz a becÅ‘?;termÃ©s;fÅ‘gyÃ¶kÃ©r;levÃ©lerezet;fakÃ©reg;A;BIOLÃ“GIA;\n";
-			do {
-				ok = 1;
-				std::getline(std::cin, s);
-				s[0] = toupper(s[0]);
-				if (s.compare("M") != 0) { ok = 1; }
-			} while (!ok);
-			if (s.compare("M") != 0) {
-				size_t cur_token = 0, next_token, hanyadik = 0;
-				do {
-					next_token = s.find_first_of(";", cur_token);
-					token = s.substr(cur_token, next_token - cur_token);
-					if (hanyadik < 7) {
-						loimfile << token << ";";
-					}
-					else if (hanyadik == 7) {
-						loimfile << token << ";\n";
-					}
-
-					if (next_token != string::npos) {
-						cur_token = next_token + 1;
-					}
-					hanyadik++;
-				} while (next_token != string::npos);
-
-			}
-			loimfile.close();
 		}
 		if (s.compare("J") == 0) {
 			int felezes = 1, kozonseg = 1, telefonos = 1, jnyeremeny = 0, k;
@@ -262,15 +222,15 @@ int main(int argc, char** argv) {
 				ok = 1;
 				cout << "Adjon meg egy nevet:\n";
 				std::getline(std::cin, nev);
-				cout << "\n" << nev << " Legyen Ã¶n is milliomos!\n\n";
+				cout << "\n" << nev << " Legyen ön is milliomos!\n\n";
 				sleep(2);
 			} while (!ok);
 			int vege = 0, nehezseg = 1;
 			int fix = 0, koz = 95, tele = 150;
-			while (!vege) {//Csak akkor lÃ©p ki, hogyha a vege=1, tehÃ¡t, ha megnyerted a jÃ¡tÃ©kot, megÃ¡lltÃ¡l vagy rossz vÃ¡laszt adtÃ¡l
+			while (!vege) {//Csak akkor lép ki, hogyha a vege=1, tehát, ha megnyerted a játékot, megálltál vagy rossz választ adtál
 				do {
 					ok = 1;
-					k = nehez[nehezseg - 1] + rand() % (nehez[nehezseg] - nehez[nehezseg - 1]);//Kirandomolja a kÃ©rdÃ©st, nehÃ©zsÃ©g szerint
+					k = nehez[nehezseg - 1] + rand() % (nehez[nehezseg] - nehez[nehezseg - 1]);//Kirandomolja a kérdést, nehézség szerint
 				} while (!ok);
 				conductor = root;
 				i = 0;
@@ -281,43 +241,67 @@ int main(int argc, char** argv) {
 				system("cls");
 				time(&kezdet);
 				if (argc == 2) { if (strcmp(argv[1], "cheat") == 0) { cout << "A helyes valasza: " << conductor->valasz << "\n"; } }
-				cout << "A kÃ©rdÃ©s tÃ©makÃ¶re: " << conductor->kategoria << "\n\n";
+				cout << "A kérdés témaköre: " << conductor->kategoria << "\n\n";
 				cout << conductor->nehez << ". " << conductor->kerdes << "\n(A) " << setw(30) << left << conductor->a << "(B)" << conductor->b <<
 					"\n(C) " << setw(30) << left << conductor->c << "(D)" << conductor->d;
 				cout << "\n";
 
 				do {
 					ok = 1;
-					cout << "Adja meg a helyes vÃ¡laszt:\n";
+					cout << "Adja meg a helyes választ:\n";
 					std::getline(std::cin, s);
 					s[0] = toupper(s[0]);
-					if ((s.compare("A") != 0) && (s.compare("B") != 0) && (s.compare("C") != 0) && (s.compare("D") != 0) && (s.compare("O") != 0)) {
+					if ((s.compare("A") != 0) && (s.compare("B") != 0) && (s.compare("C") != 0) && (s.compare("D") != 0) && (s.compare("O") != 0) && (s.compare("M") != 0)) {
 						cout << "Helytelen karakter!\n";
 						ok = 0;
 					}
 				} while (!ok);
 
-				if ((s.compare(conductor->valasz) != 0) && (s.compare("O") != 0)) {
-					if (nehezseg <= 5) { cout << "SajnÃ¡ljuk Ã¶n kiesett jÃ¡tÃ©kunkbÃ³l, mivel helytelen vÃ¡laszt adott!\nA helyes vÃ¡lasz " << conductor->valasz << " lett volna!\tA nyeremÃ©nye: " << nyeremeny[0] << "\n";  nyeremenyjatekos = nyeremeny[0]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
-					if (nehezseg > 5 && nehezseg <= 10) { cout << "SajnÃ¡ljuk Ã¶n kiesett jÃ¡tÃ©kunkbÃ³l, mivel helytelen vÃ¡laszt adott!\nA helyes vÃ¡lasz " << conductor->valasz << " lett volna!\tA nyeremÃ©nye: " << nyeremeny[5] << "\n"; nyeremenyjatekos = nyeremeny[5]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
-					if (nehezseg > 10 && nehezseg <= 15) { cout << "SajnÃ¡ljuk Ã¶n kiesett jÃ¡tÃ©kunkbÃ³l, mivel helytelen vÃ¡laszt adott!\nA helyes vÃ¡lasz " << conductor->valasz << " lett volna!\tA nyeremÃ©nye: " << nyeremeny[10] << "\n"; nyeremenyjatekos = nyeremeny[10]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
-					//Az eddig nyeremÃ©nye
+				if ((s.compare(conductor->valasz) != 0) && (s.compare("O") != 0) && (s.compare("M") != 0)) {
+					if (nehezseg <= 5) { cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[0] << "\n";  nyeremenyjatekos = nyeremeny[0]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
+					if (nehezseg > 5 && nehezseg < 10) { cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[5] << "\n"; nyeremenyjatekos = nyeremeny[5]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
+					if (nehezseg > 10 && nehezseg <= 15) { cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[10] << "\n"; nyeremenyjatekos = nyeremeny[10]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
+					//Az eddig nyereménye
 					vege = 1;
 				}
-				else if (nehezseg == 15 && (s.compare(conductor->valasz) == 0)) {
-					cout << "\t\tGratulÃ¡lunk " << nev << " Ã¶n megnyerte a jÃ¡tek fÅ‘dÃ­jÃ¡t ami nem mÃ¡s mint " << nyeremeny[nehezseg] << " FT!\n\n";
+				else if (nehezseg == 15 && s.compare(conductor->valasz) == 0) {
+					cout << "\n\n\t\tGratulálunk " << nev << " ön megnyerte a játek fõdíját ami nem más mint " << nyeremeny[nehezseg] << " FT!\n\n";
 					sleep(5);
 					time(&veg); tido = difftime(veg, kezdet);
 					nyeremenyjatekos = nyeremeny[nehezseg];
 					vege = 1;
 				}
+				else if (s.compare("M") == 0) {
+					nyeremenyjatekos = nyeremeny[nehezseg - 1];
+					time(&veg); tido = difftime(veg, kezdet);
+					cout << "Adja meg a helyes választ játékon kívül:\n";
+					do {
+						ok = 1;
+						std::getline(std::cin, s);
+						s[0] = toupper(s[0]);
+						if (s.compare("A") != 0 && s.compare("B") != 0 && s.compare("C") != 0 && s.compare("D") != 0) {
+							ok = 0; cout << "Helytelen válasz!\n";
+						}
+					} while (!ok);
+					if (s.compare(conductor->valasz) == 0) {
+						cout << "Játékon kívül eltaláltad a helyes választ!\n";
+					}
+					else {
+						cout << "A helyes válasz: " << conductor->valasz << " lett volna!\n";
+					}
+					cout << nev << " a nyereményed: " << nyeremeny[nehezseg-1] << " Ft\n";
+					sleep(3);
+					vege = 1;
+				}
 				else {
-					cout << "GratulÃ¡lunk helyes a vÃ¡lasza!\nEddigi nyeremÃ©nye: " << nyeremeny[nehezseg] << "\n";
+					cout << "Gratulálunk helyes a válasza!\nEddigi nyereménye: " << nyeremeny[nehezseg] << "\n";
 					nyeremenyjatekos = nyeremeny[nehezseg];
 					sleep(2);
 				}
 
 
+				
+				
 
 				nehezseg++;
 			}
@@ -336,7 +320,7 @@ int main(int argc, char** argv) {
 			}
 			ofstream toplista("toplista.txt");
 			if (toplista.fail()) {
-				cerr << "A fÃ¡jl nem nyithatÃ³ meg!";
+				cerr << "A fájl nem nyitható meg!";
 				exit(1);
 			}
 			srendez(adatok, rangsordb);
