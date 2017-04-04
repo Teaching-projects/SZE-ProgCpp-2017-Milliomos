@@ -208,10 +208,9 @@ int main(int argc, char** argv) {
 		if (s.compare("K") == 0) { cout << "Viszlát!\n"; kilep = 2; }
 		if (s.compare("T") == 0) {
 			system("cls");
+			cout << "Helyezés" << "\t" << setw(10) << left << "Név" << "\t" << setw(30) << left << "Nyeremény" << "\t" << setw(30) << left << "Idõ" << "\n\n";
 			for (i = 0; i < rangsordb; i++) {
-				cout << "%d.\t%-10s\t\t%-20dFT\t\t%0.f\n", i + 1, adatok[i].nev, adatok[i].nyeremeny, adatok[i].ido;
-
-
+				cout << i+1 << "." << setw(9) << left  <<"\t" << setw(9) << left << adatok[i].nev << "\t" << setw(30) << left  << adatok[i].nyeremeny << "\t" << setw(20) << left << adatok[i].ido << "\n";
 			}
 			cout << "A toplista vége!\nEnterrel tud visszalépni a fõmenübe!\n";
 
