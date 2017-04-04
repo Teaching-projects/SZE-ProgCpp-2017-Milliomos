@@ -1,10 +1,10 @@
 # SZE-ProgCpp-2017-Milliomos
-----------------------------
 
-A Legyen Ön is milliomos! (Milliomosnak is hívják röviden) televíziós kvízjáték,
-mûveltségi vetélkedõ, amelyben rendkívül magas díjakat nyerhet a játékos,
-ha jól felel az egymást követõ feleletválasztós kérdésekre.
 
-A játékban feltüntetett számok pontszámok, nem pénzösszegek,
-csupán a játékélmény szempontjából fontos virtuális nyeremények,
-melyek valódi nyereményre, pénzre nem válthatóak át! 
+A Legyen Ã–n is milliomos! (Milliomosnak is hÃ­vjÃ¡k rÃ¶viden) televÃ­ziÃ³s kvÃ­zjÃ¡tÃ©k,
+mÅ±veltsÃ©gi vetÃ©lkedÅ‘, amelyben rendkÃ­vÃ¼l magas dÃ­jakat nyerhet a jÃ¡tÃ©kos,
+ha jÃ³l felel az egymÃ¡st kÃ¶vetÅ‘ feleletvÃ¡lasztÃ³s kÃ©rdÃ©sekre.
+
+A jÃ¡tÃ©kban feltÃ¼ntetett szÃ¡mok pontszÃ¡mok, nem pÃ©nzÃ¶sszegek,
+csupÃ¡n a jÃ¡tÃ©kÃ©lmÃ©ny szempontjÃ¡bÃ³l fontos virtuÃ¡lis nyeremÃ©nyek,
+melyek valÃ³di nyeremÃ©nyre, pÃ©nzre nem vÃ¡lthatÃ³ak Ã¡t! 
