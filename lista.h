@@ -2,3 +2,57 @@ struct node {
 	int nehez; std::string kerdes; std::string a; std::string b; std::string c; std::string d; std::string valasz; std::string kategoria;
 	node *next;
 };
+
+void cserel(struct node *a, struct node *b)
+{
+	int temp;
+	std::string temp2;
+    temp = a->nehez;
+    a->nehez = b->nehez;
+    b->nehez = temp;
+	temp2=a->kerdes;
+	a->kerdes=b->kerdes;
+	b->kerdes=temp2;
+	temp2=a->a;
+	a->a=b->a;
+	b->a=temp2;
+	temp2=a->b;
+	a->b=b->b;
+	b->b,temp2;
+	temp2=a->c;
+	a->c=b->c;
+	b->c=temp2;
+	temp2=a->d;
+	a->d=b->d;
+	b->d=temp2;
+	temp2=a->kategoria;
+	a->kategoria=b->kategoria;
+	b->kategoria=temp2;
+	temp2=a->valasz;
+	a->valasz=b->valasz;
+	b->valasz=temp2;
+}
+
+void rendezes(struct node *start)
+{
+	int cserelt;
+	struct node *ptr1;
+	struct node *lptr = NULL;
+
+	do
+	{
+		cserelt = 0;
+		ptr1 = start;
+
+		while (ptr1->next != lptr)
+		{
+			if (ptr1->nehez > ptr1->next->nehez)
+			{
+				cserel(ptr1, ptr1->next);
+				cserelt = 1;
+			}
+			ptr1 = ptr1->next;
+		}
+		lptr = ptr1;
+	} while (cserelt);
+}
