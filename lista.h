@@ -1,3 +1,5 @@
+using namespace std;
+
 struct node {
 	int nehez; std::string kerdes; std::string a; std::string b; std::string c; std::string d; std::string valasz; std::string kategoria;
 	node *next;
@@ -55,4 +57,44 @@ void rendezes(struct node *start)
 		}
 		lptr = ptr1;
 	} while (cserelt);
+}
+
+
+int bekerell(string s){
+int nehezseg;
+string token;
+size_t cur_token = 0, next_token, hanyadik = 0;
+
+
+do {
+	next_token = s.find_first_of(";", cur_token);
+	token = s.substr(cur_token, next_token - cur_token);
+
+	if (hanyadik == 0) {
+		try {
+			nehezseg = stoi(token);
+			if (nehezseg<1 || nehezseg>15) { return 0; }
+		}
+		catch(std::exception){
+			cout << "Nehézségnek csak számot adhat meg!\n";
+		}
+		
+	}
+	else if (hanyadik >=1 && hanyadik < 6) {
+		if (token.empty()) { return 0; }
+	}
+	else if (hanyadik == 6) {
+		if ((token.compare("A") != 0) && (token.compare("B") != 0) && (token.compare("C") != 0) && (token.compare("D") != 0)) { return 0; }
+	}
+	else if (hanyadik == 7) {
+		if (token.empty()) { return 0; }
+	}
+
+	if (next_token != string::npos) {
+		cur_token = next_token + 1;
+	}
+		hanyadik++;
+} while (next_token != string::npos);
+	if (hanyadik != 8 && hanyadik != 9) { return 0; }
+		return 1;
 }

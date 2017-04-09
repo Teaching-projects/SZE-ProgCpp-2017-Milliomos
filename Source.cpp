@@ -63,7 +63,7 @@ int main(int argc, char** argv) {
 	std::string s;
 	std::string nev;
 	std::string token;
-	std:string line;
+std:string line;
 	node *root;
 	node *conductor;
 
@@ -186,11 +186,7 @@ int main(int argc, char** argv) {
 	while (kilep != 2) {
 		system("cls");
 		cout << "\nÜdvözöljük a Legyen Ön is Milliomos játékban!\n\n";
-<<<<<<< HEAD
 		cout << "\n|___Menu ___|\n\nÚj játék (J)\nÚtmutató a játékhoz(U)\nSzabályzat(S)\nToplista(T)\nÚj Kérdés felvétele(F)\nKilépés(K)\n";
-=======
-		cout << "\n|___Menu ___|\n\nÚj játék (J)\nÚtmutató játékhoz(U)\nSzabályzat(S)\nToplista(T)\nÚj Kérdés felvétele(F)\nKilépés(K)\n";
->>>>>>> origin/master
 		do {
 			ok = 1;
 			cout << "\n";
@@ -201,43 +197,24 @@ int main(int argc, char** argv) {
 		} while (!ok);
 		if (s.compare("S") == 0) {
 			system("cls");
-<<<<<<< HEAD
 			cout << "A székbe kerülő játékosnak 15 egyre nehezedő kérdést tesznek fel.\nA kérdések feleletválasztósak: négy válaszlehetőséget is megadnak,\nmelyek közül a játékosnak kell kiválasztania a helyeset.\n(A négy válaszlehetőséget a latin ábécé első négy betűjével jelölik.)\nAz első kérdés helyes megválaszolásával a játékos 5 000 Ft-ot nyer.\nA többi kérdéssel egyre több pénzhez jut a játékos.\nNagyjából minden kérdés után megduplázódik a nyeremény.";
 			cout << "\n\nEnterrel tud visszalépni a főmenübe!\n";
-=======
-			cout << "A székbe kerülõ játékosnak 15 egyre nehezedõ kérdést tesznek fel.\nA kérdések feleletválasztósak: négy válaszlehetõséget is megadnak,\nmelyek közül a játékosnak kell kiválasztania a helyeset.\n(A négy válaszlehetõséget a latin ábécé elsõ négy betûjével jelölik.)\nAz elsõ kérdés helyes megválaszolásával a játékos 5 000 Ft-ot nyer.\nA többi kérdéssel egyre több pénzhez jut a játékos.\nNagyjából minden kérdés után megduplázódik a nyeremény.";
-			cout << "\n\nEnterrel tud visszalépni a fõmenübe!\n";
->>>>>>> origin/master
 			getchar();
 		}
 		if (s.compare("U") == 0) {
 			system("cls");
-<<<<<<< HEAD
 			cout << "A játék során használhat segítségeket melyek a következők:\n\nKözönség segítség: a 'K' betű válaszmegadással lehet kérvényezni a közönség\nsegítségét amely százalékos arányban meg fogja adni, hogy ki mire szavazott,\ns milyen arányban.\n\nTelefonos segítség: a telefonos segítséget a 'T' betű válaszmegadással lehet\nalkalmazni, ekkor megadhatja, hogy kit akar felhívni, s utána a kívánt személy\nmegadja az általa vélt helyes válasz betűjelét.\n\nFelezés segítség: az 'F' betű válaszmegadással tudja kérni ezt a segítséget\namely után, a négy féle válaszlehetőségből kettő lesz. Magyarán mondva lefelezi.\n";
 			cout << "Az útmutató vége!\nEnterrel tud visszalépni a főmenübe!\n";
-=======
-			cout << "A játék során használhat segítségeket melyek a következõk:\n\nKözönség segítség: a 'K' betû válaszmegadással lehet kérvényezni a közönség\nsegítségét amely százalékos arányban meg fogja adni, hogy ki mire szavazott,\ns milyen arányban.\n\nTelefonos segítség: a telefonos segítséget a 'T' betû válaszmegadással lehet\nalkalmazni, ekkor megadhatja, hogy kit akar felhívni, s utána a kívánt személy\nmegadja az általa vélt helyes válasz betûjelét.\n\nFelezés segítség: az 'F' betû válaszmegadással tudja kérni ezt a segítséget\namely után, a négy féle válaszlehetõségbõl kettõ lesz. Magyarán mondva lefelezi.\n";
-			cout << "Az útmutató vége!\nEnterrel tud visszalépni a fõmenübe!\n";
->>>>>>> origin/master
 			getchar();
 		}
 		if (s.compare("K") == 0) { cout << "Viszlát!\n"; kilep = 2; }
 		if (s.compare("T") == 0) {
 			system("cls");
-<<<<<<< HEAD
 			cout << "Helyezés" << "\t" << setw(10) << left << "Név" << "\t" << setw(30) << left << "Nyeremény" << "\t" << setw(30) << left << "Idő" << "\n\n";
 			for (i = 0; i < rangsordb; i++) {
 				cout << i + 1 << "." << setw(9) << left << "\t" << setw(9) << left << adatok[i].nev << "\t" << setw(30) << left << adatok[i].nyeremeny << "\t" << setw(20) << left << adatok[i].ido << "\n";
 			}
 			cout << "A toplista vége!\nEnterrel tud visszalépni a főmenübe!\n";
-=======
-			for (i = 0; i < rangsordb; i++) {
-				cout << "%d.\t%-10s\t\t%-20dFT\t\t%0.f\n", i + 1, adatok[i].nev, adatok[i].nyeremeny, adatok[i].ido;
-
-
-			}
-			cout << "A toplista vége!\nEnterrel tud visszalépni a fõmenübe!\n";
->>>>>>> origin/master
 
 			getchar();
 		}
@@ -250,19 +227,15 @@ int main(int argc, char** argv) {
 				cerr << "A fájl nem nyitható meg!";
 				exit(1);
 			}
-<<<<<<< HEAD
 			cout << "A Kérdés nehézsége [1-15] közöttinek kell lennie, Ha mégse szeretne\núj kérdést felvenni, akkor nyomja meg az MÉGSE(M)-et.\n";
 			cout << "Új kérdés felvétele: Nehézség;Kérdés;A;B;C;D lehetsőség;Helyes válasz betűjele;Kategoria;\n";
-=======
-			cout << "A Kérdés nehézsége [1-15] közöttinek kell lennie, Ha mégse szeretnek\núj kérdést felvenni, akkor nyomja meg az MÉGSE(M)-et.\n";
-			cout << "Új kérdés felvélele: Nehézség;Kérdés;A;B;C;D lehetsőség;Helyes válasz betűjele;Kategoria;\n";
->>>>>>> origin/master
 			cout << "pl:7;Milyen növényrész a becő?;termés;főgyökér;levélerezet;fakéreg;A;BIOLÓGIA;\n";
 			do {
 				ok = 1;
 				std::getline(std::cin, s);
 				s[0] = toupper(s[0]);
-				if (s.compare("M") != 0) { ok = 1; }
+				if (s.compare("M") == 0) { ok = 1; }
+				else if(!bekerell(s)) { cout << "Helytelen formátumot adott meg!\n"; ok = 0; }
 			} while (!ok);
 			if (s.compare("M") != 0) {
 				size_t cur_token = 0, next_token, hanyadik = 0;
@@ -309,11 +282,7 @@ int main(int argc, char** argv) {
 				}
 				system("cls");
 				time(&kezdet);
-<<<<<<< HEAD
 				if (argc == 2) { if (strcmp(argv[1], "cheat") == 0) { cout << "A helyes valasz: " << conductor->valasz << "\n"; } }
-=======
-				if (argc == 2) { if (strcmp(argv[1], "cheat") == 0) { cout << "A helyes valasza: " << conductor->valasz << "\n"; } }
->>>>>>> origin/master
 				cout << "A kérdés témaköre: " << conductor->kategoria << "\n\n";
 				cout << conductor->nehez << ". " << conductor->kerdes << "\n(A) " << setw(30) << left << conductor->a << "(B)" << conductor->b <<
 					"\n(C) " << setw(30) << left << conductor->c << "(D)" << conductor->d;
@@ -338,11 +307,7 @@ int main(int argc, char** argv) {
 					vege = 1;
 				}
 				else if (nehezseg == 15 && (s.compare(conductor->valasz) == 0)) {
-<<<<<<< HEAD
 					cout << "\n\n\t\tGratulálunk " << nev << " ön megnyerte a játek fődíját ami nem más mint " << nyeremeny[nehezseg] << " FT!\n\n";
-=======
-					cout << "\t\tGratulálunk " << nev << " ön megnyerte a játek fődíját ami nem más mint " << nyeremeny[nehezseg] << " FT!\n\n";
->>>>>>> origin/master
 					sleep(5);
 					time(&veg); tido = difftime(veg, kezdet);
 					nyeremenyjatekos = nyeremeny[nehezseg];
