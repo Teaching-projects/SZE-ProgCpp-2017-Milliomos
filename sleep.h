@@ -1,7 +1,10 @@
+#ifndef SLEEP_H
+#define SLEEP_H
+
+
 #include <thread>         
 #include <chrono>
 
-void sleep(int szam) {
-	std::this_thread::sleep_for(std::chrono::seconds(szam));
+void sleep(int szam);
 
-}
+#endif
