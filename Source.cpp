@@ -20,14 +20,14 @@
 
 
 
-using namespace std;
+//using namespace std;
 #define N 10
 #define MAX 512
 #define NEVMAX 32
 
 struct toplista {
 	int helyezes;
-	string nev;
+	std::string nev;
 	int nyeremeny;
 	double ido;
 
@@ -65,16 +65,16 @@ int main(int argc, char** argv) {
 	std::string s;
 	std::string nev;
 	std::string token;
-	string line;
+	std::string line;
 	node *root;
 	node *conductor;
 
 	srand(time(NULL));
 	magyarit();
 
-	ifstream myfile("loim.csv");
+	std::ifstream myfile("loim.csv");
 	if (myfile.fail()) {
-		cerr << "A loim.csv fájl nem nyitható meg!";
+		std::cerr << "A loim.csv fájl nem nyitható meg!";
 		exit(1);
 	}
 	if (myfile.is_open())
@@ -121,11 +121,11 @@ int main(int argc, char** argv) {
 						conductor->kategoria = token;
 					}
 
-					if (next_token != string::npos) {
+					if (next_token != std::string::npos) {
 						cur_token = next_token + 1;
 					}
 					hanyadik++;
-				} while (next_token != string::npos);
+				} while (next_token != std::string::npos);
 				db++;
 
 			}
@@ -147,12 +147,12 @@ int main(int argc, char** argv) {
 	}
 
 	if (!is_file_exist("toplista.txt")) {
-		ofstream top("toplista.txt");
+		std::ofstream top("toplista.txt");
 		top.close();
 	}
-	ifstream toplista("toplista.txt");
+	std::ifstream toplista("toplista.txt");
 	if (toplista.fail()) {
-		cerr << "A toplista.txt fájl nem nyitható meg!";
+		std::cerr << "A toplista.txt fájl nem nyitható meg!";
 		exit(1);
 	}
 	if (toplista.is_open()) {
@@ -175,11 +175,11 @@ int main(int argc, char** argv) {
 				else if (hanyadik == 3) {
 					adatok[rangsordb].ido = std::stof(token);
 				}
-				if (next_token != string::npos) {
+				if (next_token != std::string::npos) {
 					cur_token = next_token + 1;
 				}
 				hanyadik++;
-			} while (next_token != string::npos);
+			} while (next_token != std::string::npos);
 			rangsordb++;
 		}
 	}
@@ -212,9 +212,9 @@ int main(int argc, char** argv) {
 		if (s.compare("K") == 0) { std::cout << "Viszlát!\n"; kilep = 2; }
 		if (s.compare("T") == 0) {
 			system("cls");
-			std::cout << "Helyezés" << "\t" << setw(10) << left << "Név" << "\t" << setw(30) << left << "Nyeremény" << "\t" << setw(30) << left << "Idõ" << "\n\n";
+			std::cout << "Helyezés" << "\t" << std::setw(10) << std::left << "Név" << "\t" << std::setw(30) << std::left << "Nyeremény" << "\t" << std::setw(30) << std::left << "Idõ" << "\n\n";
 			for (i = 0; i < rangsordb; i++) {
-				std::cout << i + 1 << "." << setw(9) << left << "\t" << setw(9) << left << adatok[i].nev << "\t" << setw(30) << left << adatok[i].nyeremeny << "\t" << setw(20) << left << adatok[i].ido << "\n";
+				std::cout << i + 1 << "." << std::setw(9) << std::left << "\t" << std::setw(9) << std::left << adatok[i].nev << "\t" << std::setw(30) << std::left << adatok[i].nyeremeny << "\t" << std::setw(20) << std::left << adatok[i].ido << "\n";
 			}
 			std::cout << "A toplista vége!\nEnterrel tud visszalépni a fõmenübe!\n";
 
@@ -226,7 +226,7 @@ int main(int argc, char** argv) {
 
 			loimfile.open("loim.csv", std::ios_base::app);
 			if (loimfile.fail()) {
-				cerr << "A fájl nem nyitható meg!";
+				std::cerr << "A fájl nem nyitható meg!";
 				exit(1);
 			}
 			std::cout << "A Kérdés nehézsége [1-15] közöttinek kell lennie, Ha mégse szeretne\núj kérdést felvenni, akkor nyomja meg az MÉGSE(M)-et.\n";
@@ -251,11 +251,11 @@ int main(int argc, char** argv) {
 						loimfile << token << ";\n";
 					}
 
-					if (next_token != string::npos) {
+					if (next_token != std::string::npos) {
 						cur_token = next_token + 1;
 					}
 					hanyadik++;
-				} while (next_token != string::npos);
+				} while (next_token != std::string::npos);
 
 			}
 			loimfile.close();
@@ -291,8 +291,8 @@ int main(int argc, char** argv) {
 				time(&kezdet);
 				if (argc == 2) { if (strcmp(argv[1], "cheat") == 0) { std::cout << "A helyes valasz: " << conductor->valasz << "\n"; } }
 				std::cout << "A kérdés témaköre: " << conductor->kategoria << "\n\n";
-				std::cout << conductor->nehez << ". " << conductor->kerdes << "\n(A) " << setw(30) << left << conductor->a << "(B)" << conductor->b <<
-					"\n(C) " << setw(30) << left << conductor->c << "(D)" << conductor->d;
+				std::cout << conductor->nehez << ". " << conductor->kerdes << "\n(A) " << std::setw(30) << std::left << conductor->a << "(B)" << conductor->b <<
+					"\n(C) " << std::setw(30) << std::left << conductor->c << "(D)" << conductor->d;
 				std::cout << "\n";
 
 				do {
@@ -301,7 +301,7 @@ int main(int argc, char** argv) {
 					std::getline(std::cin, s);
 					s[0] = toupper(s[0]);
 					if ((s.compare("A") != 0) && (s.compare("B") != 0) && (s.compare("C") != 0) && (s.compare("D") != 0) && (s.compare("F") != 0) 
-							&& (s.compare("K") != 0) && (s.compare("T") != 0) && (s.compare("O") != 0) && (s.compare("M") != 0)) 
+							&& (s.compare("K") != 0) && (s.compare("T") != 0)  && (s.compare("M") != 0)) 
 					{
 						std::cout << "Helytelen karakter!\n";
 						ok = 0;
@@ -328,14 +328,14 @@ int main(int argc, char** argv) {
 				} while (!ok);
 
 				
-				if ((s.compare(conductor->valasz) != 0) && (s.compare("O") != 0) && (s.compare("M") != 0)) {
+				if ((s.compare(conductor->valasz) != 0) && (s.compare("M") != 0)) {
 					if (nehezseg <= 5) { std::cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[0] << "\n";  nyeremenyjatekos = nyeremeny[0]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
 					if (nehezseg > 5 && nehezseg <= 10) { std::cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[5] << "\n"; nyeremenyjatekos = nyeremeny[5]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
 					if (nehezseg > 10 && nehezseg <= 15) { std::cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[10] << "\n"; nyeremenyjatekos = nyeremeny[10]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
 					//Az eddig nyereménye
 					vege = 1;
 				}
-				else if (nehezseg == 15 && ((s.compare(conductor->valasz) == 0) || (s.compare("O") == 0))) {
+				else if (nehezseg == 15 && (s.compare(conductor->valasz) == 0) ) {
 					std::cout << "\n\n\t\tGratulálunk " << nev << " ön megnyerte a játek fõdíját ami nem más mint " << nyeremeny[nehezseg] << " FT!\n\n";
 					sleep(5);
 					time(&veg); tido = difftime(veg, kezdet);
@@ -387,9 +387,9 @@ int main(int argc, char** argv) {
 					adatok[rangsordb - 1].ido = tido;
 				}
 			}
-			ofstream toplista("toplista.txt");
+			std::ofstream toplista("toplista.txt");
 			if (toplista.fail()) {
-				cerr << "A fájl nem nyitható meg!";
+				std::cerr << "A fájl nem nyitható meg!";
 				exit(1);
 			}
 			srendez(adatok, rangsordb);

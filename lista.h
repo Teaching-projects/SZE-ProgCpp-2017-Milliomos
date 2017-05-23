@@ -1,6 +1,6 @@
 #ifndef LISTA_H
 #define LISTA_H
-using namespace std;
+
 #include <iostream>
 #include <string>
 
@@ -14,5 +14,5 @@ void cserel(struct node *a, struct node *b);
 void rendezes(struct node *start);
 
 
-int bekerell(string s);
+int bekerell(std::string s);
 #endif

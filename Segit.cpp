@@ -60,7 +60,7 @@ void Segitseg::Felez(node *conductor) {
 	setFelezSzint(conductor->nehez);
 	if (getFelezes()==0)
 	{
-		cout << "Nincs több felezés segítsége" << std::endl;
+		std::cout << "Nincs több felezés segítsége" << std::endl;
 	}
 	else
 	{
@@ -78,11 +78,11 @@ void Segitseg::Felez(node *conductor) {
 			}
 		}
 		system("cls");
-		cout << "A kérdés témaköre: " << conductor->kategoria << "\n\n";
-		cout << conductor->nehez << ". " << conductor->kerdes << "\n";
+		std::cout << "A kérdés témaköre: " << conductor->kategoria << "\n\n";
+		std::cout << conductor->nehez << ". " << conductor->kerdes << "\n";
 		if (rossz.compare("A") == 0 && conductor->valasz.compare("B") == 0 || rossz.compare("B") == 0 && conductor->valasz.compare("A") == 0)
 		{
-			cout << "(A) " << setw(30) << left << conductor->a << "(B)" << conductor->b << std::endl; //jó
+			std::cout << "(A) " << std::setw(30) << std::left << conductor->a << "(B)" << conductor->b << std::endl; //jó
 			if (conductor->valasz.compare("A") == 0)
 			{
 				setRossz('B');
@@ -94,7 +94,7 @@ void Segitseg::Felez(node *conductor) {
 		}
 		else if (rossz.compare("A") == 0 && conductor->valasz.compare("C") == 0 || rossz.compare("C") == 0 && conductor->valasz.compare("A") == 0)
 		{
-			cout << "(A) " << setw(30) << left << conductor->a << "\n(C) " << setw(30) << left << conductor->c << std::endl;
+			std::cout << "(A) " << std::setw(30) << std::left << conductor->a << "\n(C) " << std::setw(30) << std::left << conductor->c << std::endl;
 			if (conductor->valasz.compare("A") == 0)
 			{
 				setRossz('C');
@@ -107,7 +107,7 @@ void Segitseg::Felez(node *conductor) {
 		}
 		else if (rossz.compare("A") == 0 && conductor->valasz.compare("D") == 0 || rossz.compare("D") == 0 && conductor->valasz.compare("A") == 0)
 		{
-			cout << "(A) " << setw(30) << left << conductor->a << std::endl << setw(30) << left << "" << "(D)" << conductor->d << std::endl;
+			std::cout << "(A) " << std::setw(30) << std::left << conductor->a << std::endl << std::setw(30) << std::left << "" << "(D)" << conductor->d << std::endl;
 			if (conductor->valasz.compare("A") == 0)
 			{
 				setRossz('D');
@@ -119,7 +119,7 @@ void Segitseg::Felez(node *conductor) {
 		}
 		else if (rossz.compare("B") == 0 && conductor->valasz.compare("C") == 0 || rossz.compare("C") == 0 && conductor->valasz.compare("B") == 0)
 		{
-			cout << setw(30) << left << "" << "(B)" << conductor->b << "\n(C) " << setw(30) << left << conductor->c << std::endl; 
+			std::cout << std::setw(30) << std::left << "" << "(B)" << conductor->b << "\n(C) " << std::setw(30) << std::left << conductor->c << std::endl;
 			if (conductor->valasz.compare("B") == 0)
 			{
 				setRossz('C');
@@ -131,7 +131,7 @@ void Segitseg::Felez(node *conductor) {
 		}
 		else if (rossz.compare("B") == 0 && conductor->valasz.compare("D") == 0 || rossz.compare("D") == 0 && conductor->valasz.compare("B") == 0)
 		{
-			cout << setw(30) << left << "" << "(B)" << conductor->b << std::endl << setw(30) << left << "" << "(D)" << conductor->d << std::endl; 
+			std::cout << std::setw(30) << std::left << "" << "(B)" << conductor->b << std::endl << std::setw(30) << std::left << "" << "(D)" << conductor->d << std::endl;
 			if (conductor->valasz.compare("B") == 0)
 			{
 				setRossz('D');
@@ -143,7 +143,7 @@ void Segitseg::Felez(node *conductor) {
 		}
 		else if (rossz.compare("C") == 0 && conductor->valasz.compare("D") == 0 || rossz.compare("D") == 0 && conductor->valasz.compare("C") == 0)
 		{
-			cout << std::endl << "(C)" << setw(30) << left << conductor->c << "(D)" << conductor->d << std::endl; 
+			std::cout << std::endl << "(C)" << std::setw(30) << std::left << conductor->c << "(D)" << conductor->d << std::endl;
 			if (conductor->valasz.compare("C") == 0)
 			{
 				setRossz('D');
@@ -159,7 +159,7 @@ void Segitseg::Felez(node *conductor) {
 void Segitseg::Kozonseg(node *conductor) {
 	if (getKozonseg() == 0)
 	{
-		cout << "A közönség segítséget már elhasználta" << std::endl;
+		std::cout << "A közönség segítséget már elhasználta" << std::endl;
 	}
 	else {
 		int szint = conductor->nehez;
@@ -181,7 +181,7 @@ void Segitseg::Kozonseg(node *conductor) {
 					rossz = rand() % 4;
 					if (BetuSzam(rossz).compare(conductor->valasz) != 0)
 					{
-						cout << "A közönség szerint a helyes válasz: " << BetuSzam(rossz) << std::endl;
+						std::cout << "A közönség szerint a helyes válasz: " << BetuSzam(rossz) << std::endl;
 						ok = 1;
 					}
 
@@ -190,7 +190,7 @@ void Segitseg::Kozonseg(node *conductor) {
 		}
 		else
 		{
-			cout << "A közönség szerint a helyes válasz: " << conductor->valasz << std::endl;
+			std::cout << "A közönség szerint a helyes válasz: " << conductor->valasz << std::endl;
 		}
 	}
 }
@@ -198,7 +198,7 @@ void Segitseg::Kozonseg(node *conductor) {
 void Segitseg::Telefon(int szint, node *conductor) {
 	if (getTelefont()==0)
 	{
-		cout << "A telefon segítséget már elhasználta" << std::endl;
+		std::cout << "A telefon segítséget már elhasználta" << std::endl;
 	}
 	else
 	{
@@ -209,15 +209,15 @@ void Segitseg::Telefon(int szint, node *conductor) {
 		int ok = 0;
 		t_tipp = (rand() % 100)*(1 + szint * 0, 01);
 		setTelefon(0);
-		cout << "Adja meg, hogy kit hívjunk fel" << std::endl;
+		std::cout << "Adja meg, hogy kit hívjunk fel" << std::endl;
 		std::getline(std::cin, nev);
-		cout << nev << " hívasa" << std::endl;
+		std::cout << nev << " hívasa" << std::endl;
 		for (int i = 0; i < 3; i++)
 		{
 			sleep(1);
-			cout << ". ";
+			std::cout << ". ";
 		}
-		cout << "\n";
+		std::cout << "\n";
 		if (t_tipp > 70)
 		{
 			if (getFelezSzint() == conductor->nehez)
@@ -231,7 +231,7 @@ void Segitseg::Telefon(int szint, node *conductor) {
 					rossz = rand() % 4;
 					if (BetuSzam(rossz).compare(conductor->valasz) != 0)
 					{
-						cout << "Szerintem a helyes válasz: " << BetuSzam(rossz) << std::endl;
+						std::cout << "Szerintem a helyes válasz: " << BetuSzam(rossz) << std::endl;
 						ok = 1;
 					}
 
@@ -240,7 +240,7 @@ void Segitseg::Telefon(int szint, node *conductor) {
 		}
 		else
 		{
-			cout << "Szerintem a helyes válasz: " << conductor->valasz << std::endl;
+			std::cout << "Szerintem a helyes válasz: " << conductor->valasz << std::endl;
 		}
 	}
 }

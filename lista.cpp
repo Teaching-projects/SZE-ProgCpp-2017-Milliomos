@@ -54,9 +54,9 @@ void rendezes(struct node *start)
 	} while (cserelt);
 }
 
-int bekerell(string s) {
+int bekerell(std::string s) {
 	int nehezseg;
-	string token;
+	std::string token;
 	size_t cur_token = 0, next_token, hanyadik = 0;
 
 
@@ -70,7 +70,7 @@ int bekerell(string s) {
 				if (nehezseg<1 || nehezseg>15) { return 0; }
 			}
 			catch (std::exception) {
-				cout << "Nehézségnek csak számot adhat meg!\n";
+				std::cout << "Nehézségnek csak számot adhat meg!\n";
 			}
 
 		}
@@ -84,11 +84,11 @@ int bekerell(string s) {
 			if (token.empty()) { return 0; }
 		}
 
-		if (next_token != string::npos) {
+		if (next_token != std::string::npos) {
 			cur_token = next_token + 1;
 		}
 		hanyadik++;
-	} while (next_token != string::npos);
+	} while (next_token != std::string::npos);
 	if (hanyadik != 8 && hanyadik != 9) { return 0; }
 	return 1;
 }
