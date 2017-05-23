@@ -261,16 +261,16 @@ int main(int argc, char** argv) {
 			loimfile.close();
 		}
 		if (s.compare("J") == 0) {
-			int /*felezes = 1, kozonseg = 1, telefonos = 1,*/ jnyeremeny = 0, k; //van nekik osztály
+			int jnyeremeny = 0, k;
 			do {
 				ok = 1;
 				std::cout << "Adjon meg egy nevet:\n";
 				std::getline(std::cin, nev);
-				std::cout << "\n" << nev << " Legyen ön is milliomos!\n\n";
-				sleep(2);
+				if (nev == "") { ok = 0; std::cout << "Töltse ki a név mezõt!\n"; }	
 			} while (!ok);
-			int vege = 0, nehezseg = 1;
-			//int fix = 0, koz = 95, tele = 150;
+			std::cout << "\n" << nev << " Legyen ön is milliomos!\nInduljon a játék! Sok szerencsét kívánunk!\n";
+			sleep(5);
+			int vege = 0, nehezseg = 1;			
 			Segitseg segitsegek{};
 			while (!vege) {//Csak akkor lép ki, hogyha a vege=1, tehát, ha megnyerted a játékot, megálltál vagy rossz választ adtál
 				
@@ -332,7 +332,7 @@ int main(int argc, char** argv) {
 					if (nehezseg <= 5) { std::cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[0] << "\n";  nyeremenyjatekos = nyeremeny[0]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
 					if (nehezseg > 5 && nehezseg <= 10) { std::cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[5] << "\n"; nyeremenyjatekos = nyeremeny[5]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
 					if (nehezseg > 10 && nehezseg <= 15) { std::cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[10] << "\n"; nyeremenyjatekos = nyeremeny[10]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
-					//Az eddig nyereménye
+					//Az eddigi nyereménye
 					vege = 1;
 				}
 				else if (nehezseg == 15 && (s.compare(conductor->valasz) == 0) ) {
