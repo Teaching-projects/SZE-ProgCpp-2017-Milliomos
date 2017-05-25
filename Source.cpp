@@ -85,41 +85,6 @@ int main(int argc, char** argv) {
 				root = new node;
 				root->next = 0;
 				conductor = root;
-				size_t cur_token = 0, next_token, hanyadik = 0;
-				do {
-					next_token = line.find_first_of(";", cur_token);
-					token = line.substr(cur_token, next_token - cur_token);
-					if (hanyadik == 0) {
-						conductor->nehez = nehezellseged = std::stoi(token);
-						nehezsegseged[nehezellseged]++;
-					}
-					else if (hanyadik == 1) {
-						conductor->kerdes = token;
-					}
-					else if (hanyadik == 2) {
-						conductor->a = token;
-					}
-					else if (hanyadik == 3) {
-						conductor->b = token;
-					}
-					else if (hanyadik == 4) {
-						conductor->c = token;
-					}
-					else if (hanyadik == 5) {
-						conductor->d = token;
-					}
-					else if (hanyadik == 6) {
-						conductor->valasz = token;
-					}
-					else if (hanyadik == 7) {
-						conductor->kategoria = token;
-					}
-
-					if (next_token != std::string::npos) {
-						cur_token = next_token + 1;
-					}
-					hanyadik++;
-				} while (next_token != std::string::npos);
 				db++;
 			}
 			else {
@@ -364,22 +329,20 @@ int main(int argc, char** argv) {
 
 				
 				if ((s.compare(conductor->valasz) != 0) && (s.compare("M") != 0)) {
-					if (nehezseg <= 5) { std::cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[0] << "\n";  nyeremenyjatekos = nyeremeny[0]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
-					if (nehezseg > 5 && nehezseg <= 10) { std::cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[5] << "\n"; nyeremenyjatekos = nyeremeny[5]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
-					if (nehezseg > 10 && nehezseg <= 15) { std::cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[10] << "\n"; nyeremenyjatekos = nyeremeny[10]; time(&veg); tido = difftime(veg, kezdet); sleep(3); }
+					if (nehezseg <= 5) { std::cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[0] << "\n";  nyeremenyjatekos = nyeremeny[0]; sleep(3); }
+					if (nehezseg > 5 && nehezseg <= 10) { std::cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[5] << "\n"; nyeremenyjatekos = nyeremeny[5]; sleep(3); }
+					if (nehezseg > 10 && nehezseg <= 15) { std::cout << "Sajnáljuk ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " << conductor->valasz << " lett volna!\tA nyereménye: " << nyeremeny[10] << "\n"; nyeremenyjatekos = nyeremeny[10]; sleep(3); }
 					//Az eddigi nyereménye
 					vege = 1;
 				}
 				else if (nehezseg == 15 && (s.compare(conductor->valasz) == 0) ) {
 					std::cout << "\n\n\t\tGratulálunk " << nev << " ön megnyerte a játek fõdíját ami nem más mint " << nyeremeny[nehezseg] << " FT!\n\n";
-					sleep(5);
-					time(&veg); tido = difftime(veg, kezdet);
+					sleep(5);					
 					nyeremenyjatekos = nyeremeny[nehezseg];
 					vege = 1;
 				}
 				else if (s.compare("M") == 0) {
-					nyeremenyjatekos = nyeremeny[nehezseg - 1];
-					time(&veg); tido = difftime(veg, kezdet);
+					nyeremenyjatekos = nyeremeny[nehezseg - 1];					
 					std::cout << "Adja meg a helyes választ játékon kívül:\n";
 					do {
 						ok = 1;
@@ -404,11 +367,9 @@ int main(int argc, char** argv) {
 					nyeremenyjatekos = nyeremeny[nehezseg];
 					sleep(2);
 				}
-
-
-
 				nehezseg++;
 			}
+			time(&veg); tido = difftime(veg, kezdet);
 			if (rangsordb != 10) {
 				adatok[rangsordb].nev = nev;
 				adatok[rangsordb].nyeremeny = nyeremenyjatekos;
