@@ -85,6 +85,41 @@ int main(int argc, char** argv) {
 				root = new node;
 				root->next = 0;
 				conductor = root;
+				size_t cur_token = 0, next_token, hanyadik = 0;
+				do {
+					next_token = line.find_first_of(";", cur_token);
+					token = line.substr(cur_token, next_token - cur_token);
+					if (hanyadik == 0) {
+						conductor->nehez = nehezellseged = std::stoi(token);
+						nehezsegseged[nehezellseged]++;
+					}
+					else if (hanyadik == 1) {
+						conductor->kerdes = token;
+					}
+					else if (hanyadik == 2) {
+						conductor->a = token;
+					}
+					else if (hanyadik == 3) {
+						conductor->b = token;
+					}
+					else if (hanyadik == 4) {
+						conductor->c = token;
+					}
+					else if (hanyadik == 5) {
+						conductor->d = token;
+					}
+					else if (hanyadik == 6) {
+						conductor->valasz = token;
+					}
+					else if (hanyadik == 7) {
+						conductor->kategoria = token;
+					}
+
+					if (next_token != std::string::npos) {
+						cur_token = next_token + 1;
+					}
+					hanyadik++;
+				} while (next_token != std::string::npos);
 				db++;
 			}
 			else {
