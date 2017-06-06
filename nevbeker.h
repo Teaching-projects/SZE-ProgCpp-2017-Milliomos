@@ -26,9 +26,13 @@ namespace Loimgui {
 		nevbeker(void)
 		{
 			InitializeComponent();
+			dbnevplus();
 			//
 			//TODO: Add the constructor code here
 			//
+		}
+		static int getdbnev() {
+			return dbnev;
 		}
 
 	protected:
@@ -41,6 +45,11 @@ namespace Loimgui {
 			{
 				delete components;
 			}
+			dbnev--;
+		}
+		static int dbnev = 0;
+		void dbnevplus() {
+			dbnev++;
 		}
 	private: System::Windows::Forms::Label^  label1;
 	protected:
@@ -74,54 +83,56 @@ namespace Loimgui {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->label1->Location = System::Drawing::Point(50, 39);
-			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label1->Location = System::Drawing::Point(67, 48);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(81, 26);
+			this->label1->Size = System::Drawing::Size(103, 32);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Neve : ";
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(132, 39);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox1->Location = System::Drawing::Point(176, 48);
+			this->textBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(111, 20);
+			this->textBox1->Size = System::Drawing::Size(147, 22);
 			this->textBox1->TabIndex = 1;
+			this->textBox1->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &nevbeker::textBox1_KeyDown);
 			// 
 			// okbutton
 			// 
-			this->okbutton->Location = System::Drawing::Point(186, 93);
-			this->okbutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->okbutton->Location = System::Drawing::Point(248, 114);
+			this->okbutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->okbutton->Name = L"okbutton";
-			this->okbutton->Size = System::Drawing::Size(73, 24);
+			this->okbutton->Size = System::Drawing::Size(97, 30);
 			this->okbutton->TabIndex = 2;
+			this->okbutton->TabStop = false;
 			this->okbutton->Text = L"Ok";
 			this->okbutton->UseVisualStyleBackColor = true;
 			this->okbutton->Click += gcnew System::EventHandler(this, &nevbeker::button1_Click);
 			// 
 			// megsebutton
 			// 
-			this->megsebutton->Location = System::Drawing::Point(271, 93);
-			this->megsebutton->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->megsebutton->Location = System::Drawing::Point(361, 114);
+			this->megsebutton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->megsebutton->Name = L"megsebutton";
-			this->megsebutton->Size = System::Drawing::Size(73, 24);
+			this->megsebutton->Size = System::Drawing::Size(97, 30);
 			this->megsebutton->TabIndex = 3;
+			this->megsebutton->TabStop = false;
 			this->megsebutton->Text = L"Mégse";
 			this->megsebutton->UseVisualStyleBackColor = true;
 			this->megsebutton->Click += gcnew System::EventHandler(this, &nevbeker::button2_Click);
 			// 
 			// nevbeker
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(352, 136);
+			this->ClientSize = System::Drawing::Size(469, 167);
 			this->Controls->Add(this->megsebutton);
 			this->Controls->Add(this->okbutton);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
 			this->Name = L"nevbeker";
@@ -146,10 +157,28 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			MessageBoxIcon::Error);
 		}
 	else {
-		jatek^ game = gcnew jatek(textBox1->Text);
-		game->Visible = true;
-		this->Close();
+			jatek^ game = gcnew jatek(textBox1->Text);
+			game->Visible = true;
+			this->Close();
 	}
-}}; 
+}
+//private: System::Void textBox1_TextChanged(System::Object^  sender, System::EventArgs^  e) {
+//
+//}
+private: System::Void textBox1_KeyDown(System::Object^  sender, System::Windows::Forms::KeyEventArgs^  e) {
+	if (e->KeyCode == Keys::Enter) {
+		if (textBox1->Text == "") {
+			MessageBox::Show("Üres mezõt nem adhat meg!",
+				"Hiba lépett fel!", MessageBoxButtons::OK,
+				MessageBoxIcon::Error);
+		}
+		else {
+				jatek^ game = gcnew jatek(textBox1->Text);
+				game->Visible = true;
+				this->Close();
+		}
+	}
+}
+};
 }
 #endif // !NEVBEKER_H

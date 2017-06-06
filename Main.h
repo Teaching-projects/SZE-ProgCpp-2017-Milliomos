@@ -8,6 +8,7 @@
 #include "nevbeker.h"
 #include "toplista.h"
 
+
 namespace Loimgui {
 
 	using namespace System;
@@ -90,6 +91,7 @@ namespace Loimgui {
 			this->ujKerdesbutton->Name = L"ujKerdesbutton";
 			this->ujKerdesbutton->Size = System::Drawing::Size(335, 33);
 			this->ujKerdesbutton->TabIndex = 11;
+			this->ujKerdesbutton->TabStop = false;
 			this->ujKerdesbutton->Text = L"Toplista";
 			this->ujKerdesbutton->UseVisualStyleBackColor = true;
 			this->ujKerdesbutton->Click += gcnew System::EventHandler(this, &Main::ujKerdesbutton_Click);
@@ -101,6 +103,7 @@ namespace Loimgui {
 			this->utmutatbutton->Name = L"utmutatbutton";
 			this->utmutatbutton->Size = System::Drawing::Size(335, 33);
 			this->utmutatbutton->TabIndex = 10;
+			this->utmutatbutton->TabStop = false;
 			this->utmutatbutton->Text = L"Útmutató a játékhoz";
 			this->utmutatbutton->UseVisualStyleBackColor = true;
 			this->utmutatbutton->Click += gcnew System::EventHandler(this, &Main::button4_Click);
@@ -112,6 +115,7 @@ namespace Loimgui {
 			this->mainKilepbutton->Name = L"mainKilepbutton";
 			this->mainKilepbutton->Size = System::Drawing::Size(335, 33);
 			this->mainKilepbutton->TabIndex = 9;
+			this->mainKilepbutton->TabStop = false;
 			this->mainKilepbutton->Text = L"Kilépés";
 			this->mainKilepbutton->UseVisualStyleBackColor = true;
 			this->mainKilepbutton->Click += gcnew System::EventHandler(this, &Main::button3_Click);
@@ -123,6 +127,7 @@ namespace Loimgui {
 			this->szabalybutton->Name = L"szabalybutton";
 			this->szabalybutton->Size = System::Drawing::Size(335, 33);
 			this->szabalybutton->TabIndex = 8;
+			this->szabalybutton->TabStop = false;
 			this->szabalybutton->Text = L"Szabályzat";
 			this->szabalybutton->UseVisualStyleBackColor = true;
 			this->szabalybutton->Click += gcnew System::EventHandler(this, &Main::button2_Click);
@@ -134,6 +139,7 @@ namespace Loimgui {
 			this->jatekbutton->Name = L"jatekbutton";
 			this->jatekbutton->Size = System::Drawing::Size(335, 33);
 			this->jatekbutton->TabIndex = 7;
+			this->jatekbutton->TabStop = false;
 			this->jatekbutton->Text = L"Játék";
 			this->jatekbutton->UseVisualStyleBackColor = true;
 			this->jatekbutton->Click += gcnew System::EventHandler(this, &Main::button1_Click);
@@ -166,6 +172,7 @@ namespace Loimgui {
 			this->visszabutton->Name = L"visszabutton";
 			this->visszabutton->Size = System::Drawing::Size(143, 33);
 			this->visszabutton->TabIndex = 13;
+			this->visszabutton->TabStop = false;
 			this->visszabutton->Text = L"Vissza";
 			this->visszabutton->UseVisualStyleBackColor = true;
 			this->visszabutton->Visible = false;
@@ -199,8 +206,10 @@ namespace Loimgui {
 #pragma endregion
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 		Application::Exit();
+		label1->Focus();
 	}
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+	label1->Focus();
 	label1->Visible = false;
 	jatekbutton->Visible = false;
 	szabalybutton->Visible = false;
@@ -211,7 +220,6 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 	this->Text = L"Szabályzat";
 	this->label2->Text = L"A székbe kerülõ játékosnak 15 egyre nehezedõ kérdést tesznek fel.\nA kérdések feleletválasztósak: négy válaszlehetõséget is megadnak,\nmelyek közül a játékosnak kell kiválasztania a helyeset.\n(A négy válaszlehetõséget a latin ábécé elsõ négy betûjével jelölik.)\nAz elsõ kérdés helyes megválaszolásával a játékos 5 000 Ft-ot nyer.\nA többi kérdéssel egyre több pénzhez jut a játékos.\nNagyjából minden kérdés után megduplázódik a nyeremény.";
 	visszabutton->Visible = true;
-	
 }
 
 private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -228,6 +236,7 @@ private: System::Void button6_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void Main_Load(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+	label1->Focus();
 	label1->Visible = false;
 	jatekbutton->Visible = false;
 	szabalybutton->Visible = false;
@@ -240,14 +249,21 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 	visszabutton->Visible = true;
 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-	
-	nevbeker^ nev = gcnew nevbeker();
-	nev->Visible = true;
+	label1->Focus();
+	if (nevbeker::getdbnev() == 0 && jatek::getdbjatek() == 0) {
+		nevbeker^ nev = gcnew nevbeker();
+		nev->Visible = true;
+	}
 	
 }
-private: System::Void ujKerdesbutton_Click(System::Object^  sender, System::EventArgs^  e) {
-	toplista^ t = gcnew toplista();
-	t->Visible = true;
+	private: System::Void ujKerdesbutton_Click(System::Object^  sender, System::EventArgs^  e) {
+		label1->Focus();
+		if (toplista::getdbtop() == 0) {
+			toplista^ t = gcnew toplista();
+			t->Visible = true;
+		}
+		
+	
 }
 };
 }

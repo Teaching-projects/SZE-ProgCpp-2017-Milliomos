@@ -20,9 +20,13 @@ namespace Loimgui {
 		{
 			InitializeComponent();
 			toplistafeltolt();
+			dbtopplus();
 			//
 			//TODO: Add the constructor code here
 			//
+		}
+		static int getdbtop() {
+			return dbtop;
 		}
 
 	protected:
@@ -35,6 +39,11 @@ namespace Loimgui {
 			{
 				delete components;
 			}
+			dbtop--;
+		}
+		static int dbtop = 0;
+		void dbtopplus() {
+			dbtop++;
 		}
 	private: System::Windows::Forms::TableLayoutPanel^  tableLayoutPanel1;
 	private: System::Windows::Forms::Label^  label40;
@@ -81,6 +90,7 @@ namespace Loimgui {
 	private: System::Windows::Forms::Label^  label43;
 	private: System::Windows::Forms::Label^  label42;
 	private: System::Windows::Forms::Label^  label41;
+	private: System::Windows::Forms::Button^  button1;
 	protected:
 
 	protected:
@@ -143,6 +153,7 @@ namespace Loimgui {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->tableLayoutPanel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -225,18 +236,16 @@ namespace Loimgui {
 			this->label44->AutoSize = true;
 			this->label44->Location = System::Drawing::Point(131, 290);
 			this->label44->Name = L"label44";
-			this->label44->Size = System::Drawing::Size(54, 17);
+			this->label44->Size = System::Drawing::Size(0, 17);
 			this->label44->TabIndex = 43;
-			
 			// 
 			// label43
 			// 
 			this->label43->AutoSize = true;
 			this->label43->Location = System::Drawing::Point(3, 290);
 			this->label43->Name = L"label43";
-			this->label43->Size = System::Drawing::Size(54, 17);
+			this->label43->Size = System::Drawing::Size(0, 17);
 			this->label43->TabIndex = 42;
-			
 			// 
 			// label42
 			// 
@@ -251,25 +260,23 @@ namespace Loimgui {
 			this->label41->AutoSize = true;
 			this->label41->Location = System::Drawing::Point(259, 290);
 			this->label41->Name = L"label41";
-			this->label41->Size = System::Drawing::Size(54, 17);
+			this->label41->Size = System::Drawing::Size(0, 17);
 			this->label41->TabIndex = 40;
-			
 			// 
 			// label40
 			// 
 			this->label40->AutoSize = true;
 			this->label40->Location = System::Drawing::Point(387, 261);
 			this->label40->Name = L"label40";
-			this->label40->Size = System::Drawing::Size(54, 17);
+			this->label40->Size = System::Drawing::Size(0, 17);
 			this->label40->TabIndex = 39;
-		
 			// 
 			// label39
 			// 
 			this->label39->AutoSize = true;
 			this->label39->Location = System::Drawing::Point(259, 261);
 			this->label39->Name = L"label39";
-			this->label39->Size = System::Drawing::Size(54, 17);
+			this->label39->Size = System::Drawing::Size(0, 17);
 			this->label39->TabIndex = 38;
 			// 
 			// label38
@@ -277,7 +284,7 @@ namespace Loimgui {
 			this->label38->AutoSize = true;
 			this->label38->Location = System::Drawing::Point(131, 261);
 			this->label38->Name = L"label38";
-			this->label38->Size = System::Drawing::Size(54, 17);
+			this->label38->Size = System::Drawing::Size(0, 17);
 			this->label38->TabIndex = 37;
 			// 
 			// label37
@@ -285,7 +292,7 @@ namespace Loimgui {
 			this->label37->AutoSize = true;
 			this->label37->Location = System::Drawing::Point(3, 261);
 			this->label37->Name = L"label37";
-			this->label37->Size = System::Drawing::Size(54, 17);
+			this->label37->Size = System::Drawing::Size(0, 17);
 			this->label37->TabIndex = 36;
 			// 
 			// label36
@@ -293,7 +300,7 @@ namespace Loimgui {
 			this->label36->AutoSize = true;
 			this->label36->Location = System::Drawing::Point(387, 232);
 			this->label36->Name = L"label36";
-			this->label36->Size = System::Drawing::Size(54, 17);
+			this->label36->Size = System::Drawing::Size(0, 17);
 			this->label36->TabIndex = 35;
 			// 
 			// label35
@@ -301,7 +308,7 @@ namespace Loimgui {
 			this->label35->AutoSize = true;
 			this->label35->Location = System::Drawing::Point(259, 232);
 			this->label35->Name = L"label35";
-			this->label35->Size = System::Drawing::Size(54, 17);
+			this->label35->Size = System::Drawing::Size(0, 17);
 			this->label35->TabIndex = 34;
 			// 
 			// label34
@@ -309,7 +316,7 @@ namespace Loimgui {
 			this->label34->AutoSize = true;
 			this->label34->Location = System::Drawing::Point(131, 232);
 			this->label34->Name = L"label34";
-			this->label34->Size = System::Drawing::Size(54, 17);
+			this->label34->Size = System::Drawing::Size(0, 17);
 			this->label34->TabIndex = 33;
 			// 
 			// label33
@@ -317,7 +324,7 @@ namespace Loimgui {
 			this->label33->AutoSize = true;
 			this->label33->Location = System::Drawing::Point(3, 232);
 			this->label33->Name = L"label33";
-			this->label33->Size = System::Drawing::Size(54, 17);
+			this->label33->Size = System::Drawing::Size(0, 17);
 			this->label33->TabIndex = 32;
 			// 
 			// label32
@@ -325,7 +332,7 @@ namespace Loimgui {
 			this->label32->AutoSize = true;
 			this->label32->Location = System::Drawing::Point(387, 203);
 			this->label32->Name = L"label32";
-			this->label32->Size = System::Drawing::Size(54, 17);
+			this->label32->Size = System::Drawing::Size(0, 17);
 			this->label32->TabIndex = 31;
 			// 
 			// label31
@@ -333,7 +340,7 @@ namespace Loimgui {
 			this->label31->AutoSize = true;
 			this->label31->Location = System::Drawing::Point(259, 203);
 			this->label31->Name = L"label31";
-			this->label31->Size = System::Drawing::Size(54, 17);
+			this->label31->Size = System::Drawing::Size(0, 17);
 			this->label31->TabIndex = 30;
 			// 
 			// label30
@@ -341,7 +348,7 @@ namespace Loimgui {
 			this->label30->AutoSize = true;
 			this->label30->Location = System::Drawing::Point(131, 203);
 			this->label30->Name = L"label30";
-			this->label30->Size = System::Drawing::Size(54, 17);
+			this->label30->Size = System::Drawing::Size(0, 17);
 			this->label30->TabIndex = 29;
 			// 
 			// label29
@@ -349,7 +356,7 @@ namespace Loimgui {
 			this->label29->AutoSize = true;
 			this->label29->Location = System::Drawing::Point(3, 203);
 			this->label29->Name = L"label29";
-			this->label29->Size = System::Drawing::Size(54, 17);
+			this->label29->Size = System::Drawing::Size(0, 17);
 			this->label29->TabIndex = 28;
 			// 
 			// label28
@@ -357,7 +364,7 @@ namespace Loimgui {
 			this->label28->AutoSize = true;
 			this->label28->Location = System::Drawing::Point(387, 174);
 			this->label28->Name = L"label28";
-			this->label28->Size = System::Drawing::Size(54, 17);
+			this->label28->Size = System::Drawing::Size(0, 17);
 			this->label28->TabIndex = 27;
 			// 
 			// label27
@@ -365,7 +372,7 @@ namespace Loimgui {
 			this->label27->AutoSize = true;
 			this->label27->Location = System::Drawing::Point(259, 174);
 			this->label27->Name = L"label27";
-			this->label27->Size = System::Drawing::Size(54, 17);
+			this->label27->Size = System::Drawing::Size(0, 17);
 			this->label27->TabIndex = 26;
 			// 
 			// label26
@@ -373,7 +380,7 @@ namespace Loimgui {
 			this->label26->AutoSize = true;
 			this->label26->Location = System::Drawing::Point(131, 174);
 			this->label26->Name = L"label26";
-			this->label26->Size = System::Drawing::Size(54, 17);
+			this->label26->Size = System::Drawing::Size(0, 17);
 			this->label26->TabIndex = 25;
 			// 
 			// label25
@@ -381,7 +388,7 @@ namespace Loimgui {
 			this->label25->AutoSize = true;
 			this->label25->Location = System::Drawing::Point(3, 174);
 			this->label25->Name = L"label25";
-			this->label25->Size = System::Drawing::Size(54, 17);
+			this->label25->Size = System::Drawing::Size(0, 17);
 			this->label25->TabIndex = 24;
 			// 
 			// label24
@@ -389,7 +396,7 @@ namespace Loimgui {
 			this->label24->AutoSize = true;
 			this->label24->Location = System::Drawing::Point(387, 145);
 			this->label24->Name = L"label24";
-			this->label24->Size = System::Drawing::Size(54, 17);
+			this->label24->Size = System::Drawing::Size(0, 17);
 			this->label24->TabIndex = 23;
 			// 
 			// label23
@@ -397,7 +404,7 @@ namespace Loimgui {
 			this->label23->AutoSize = true;
 			this->label23->Location = System::Drawing::Point(259, 145);
 			this->label23->Name = L"label23";
-			this->label23->Size = System::Drawing::Size(54, 17);
+			this->label23->Size = System::Drawing::Size(0, 17);
 			this->label23->TabIndex = 22;
 			// 
 			// label22
@@ -405,7 +412,7 @@ namespace Loimgui {
 			this->label22->AutoSize = true;
 			this->label22->Location = System::Drawing::Point(131, 145);
 			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(54, 17);
+			this->label22->Size = System::Drawing::Size(0, 17);
 			this->label22->TabIndex = 21;
 			// 
 			// label21
@@ -413,7 +420,7 @@ namespace Loimgui {
 			this->label21->AutoSize = true;
 			this->label21->Location = System::Drawing::Point(3, 145);
 			this->label21->Name = L"label21";
-			this->label21->Size = System::Drawing::Size(54, 17);
+			this->label21->Size = System::Drawing::Size(0, 17);
 			this->label21->TabIndex = 20;
 			// 
 			// label20
@@ -421,7 +428,7 @@ namespace Loimgui {
 			this->label20->AutoSize = true;
 			this->label20->Location = System::Drawing::Point(387, 116);
 			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(54, 17);
+			this->label20->Size = System::Drawing::Size(0, 17);
 			this->label20->TabIndex = 19;
 			// 
 			// label19
@@ -429,7 +436,7 @@ namespace Loimgui {
 			this->label19->AutoSize = true;
 			this->label19->Location = System::Drawing::Point(259, 116);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(54, 17);
+			this->label19->Size = System::Drawing::Size(0, 17);
 			this->label19->TabIndex = 18;
 			// 
 			// label18
@@ -437,7 +444,7 @@ namespace Loimgui {
 			this->label18->AutoSize = true;
 			this->label18->Location = System::Drawing::Point(131, 116);
 			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(54, 17);
+			this->label18->Size = System::Drawing::Size(0, 17);
 			this->label18->TabIndex = 17;
 			// 
 			// label17
@@ -445,7 +452,7 @@ namespace Loimgui {
 			this->label17->AutoSize = true;
 			this->label17->Location = System::Drawing::Point(3, 116);
 			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(54, 17);
+			this->label17->Size = System::Drawing::Size(0, 17);
 			this->label17->TabIndex = 16;
 			// 
 			// label16
@@ -453,7 +460,7 @@ namespace Loimgui {
 			this->label16->AutoSize = true;
 			this->label16->Location = System::Drawing::Point(387, 87);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(54, 17);
+			this->label16->Size = System::Drawing::Size(0, 17);
 			this->label16->TabIndex = 15;
 			// 
 			// label15
@@ -461,7 +468,7 @@ namespace Loimgui {
 			this->label15->AutoSize = true;
 			this->label15->Location = System::Drawing::Point(259, 87);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(54, 17);
+			this->label15->Size = System::Drawing::Size(0, 17);
 			this->label15->TabIndex = 14;
 			// 
 			// label14
@@ -469,7 +476,7 @@ namespace Loimgui {
 			this->label14->AutoSize = true;
 			this->label14->Location = System::Drawing::Point(131, 87);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(54, 17);
+			this->label14->Size = System::Drawing::Size(0, 17);
 			this->label14->TabIndex = 13;
 			// 
 			// label13
@@ -477,7 +484,7 @@ namespace Loimgui {
 			this->label13->AutoSize = true;
 			this->label13->Location = System::Drawing::Point(3, 87);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(54, 17);
+			this->label13->Size = System::Drawing::Size(0, 17);
 			this->label13->TabIndex = 12;
 			// 
 			// label12
@@ -485,7 +492,7 @@ namespace Loimgui {
 			this->label12->AutoSize = true;
 			this->label12->Location = System::Drawing::Point(387, 58);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(54, 17);
+			this->label12->Size = System::Drawing::Size(0, 17);
 			this->label12->TabIndex = 11;
 			// 
 			// label11
@@ -493,7 +500,7 @@ namespace Loimgui {
 			this->label11->AutoSize = true;
 			this->label11->Location = System::Drawing::Point(259, 58);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(54, 17);
+			this->label11->Size = System::Drawing::Size(0, 17);
 			this->label11->TabIndex = 10;
 			// 
 			// label10
@@ -501,7 +508,7 @@ namespace Loimgui {
 			this->label10->AutoSize = true;
 			this->label10->Location = System::Drawing::Point(131, 58);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(54, 17);
+			this->label10->Size = System::Drawing::Size(0, 17);
 			this->label10->TabIndex = 9;
 			// 
 			// label9
@@ -509,7 +516,7 @@ namespace Loimgui {
 			this->label9->AutoSize = true;
 			this->label9->Location = System::Drawing::Point(3, 58);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(46, 17);
+			this->label9->Size = System::Drawing::Size(0, 17);
 			this->label9->TabIndex = 8;
 			// 
 			// label8
@@ -517,7 +524,7 @@ namespace Loimgui {
 			this->label8->AutoSize = true;
 			this->label8->Location = System::Drawing::Point(387, 29);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(46, 17);
+			this->label8->Size = System::Drawing::Size(0, 17);
 			this->label8->TabIndex = 7;
 			// 
 			// label7
@@ -525,7 +532,7 @@ namespace Loimgui {
 			this->label7->AutoSize = true;
 			this->label7->Location = System::Drawing::Point(259, 29);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(46, 17);
+			this->label7->Size = System::Drawing::Size(0, 17);
 			this->label7->TabIndex = 6;
 			// 
 			// label6
@@ -533,7 +540,7 @@ namespace Loimgui {
 			this->label6->AutoSize = true;
 			this->label6->Location = System::Drawing::Point(131, 29);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(46, 17);
+			this->label6->Size = System::Drawing::Size(0, 17);
 			this->label6->TabIndex = 5;
 			// 
 			// label5
@@ -580,11 +587,23 @@ namespace Loimgui {
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Helyezés";
 			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(418, 372);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(123, 30);
+			this->button1->TabIndex = 1;
+			this->button1->TabStop = false;
+			this->button1->Text = L"Vissza";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &toplista::button1_Click);
+			// 
 			// toplista
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(573, 388);
+			this->ClientSize = System::Drawing::Size(609, 424);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->tableLayoutPanel1);
 			this->MaximizeBox = false;
 			this->MinimizeBox = false;
@@ -704,5 +723,8 @@ namespace Loimgui {
 	private: System::Void tableLayoutPanel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 		
 	}
-	};
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		Close();
+	}
+};
 }

@@ -100,13 +100,17 @@ namespace Loimgui {
 			InitializeComponent();
 			beolvas(jatekosnev);
 
-
+			dbjatekplus();
+		}
+			static int getdbjatek() {
+				return dbjatek;
+			}
 
 
 			//
 			//TODO: Add the constructor code here
 			//
-		}
+		
 
 	protected:
 		/// <summary>
@@ -118,6 +122,11 @@ namespace Loimgui {
 			{
 				delete components;
 			}
+			dbjatek--;
+		}
+		static int dbjatek = 0;
+		void dbjatekplus() {
+			dbjatek++;
 		}
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::Label^  label2;
@@ -130,6 +139,7 @@ namespace Loimgui {
 	private: System::Windows::Forms::Button^  button7;
 	private: System::Windows::Forms::Button^  button8;
 	private: System::Windows::Forms::Button^  button9;
+	private: System::Windows::Forms::Label^  label3;
 	protected:
 
 	protected:
@@ -161,6 +171,7 @@ namespace Loimgui {
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// label1
@@ -175,7 +186,7 @@ namespace Loimgui {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(164, 57);
+			this->label2->Location = System::Drawing::Point(92, 57);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(46, 17);
 			this->label2->TabIndex = 1;
@@ -188,6 +199,7 @@ namespace Loimgui {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(139, 26);
 			this->button1->TabIndex = 2;
+			this->button1->TabStop = false;
 			this->button1->Text = L"Felezés";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &jatek::button1_Click);
@@ -199,6 +211,7 @@ namespace Loimgui {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(139, 26);
 			this->button2->TabIndex = 3;
+			this->button2->TabStop = false;
 			this->button2->Text = L"Telefonos segítség";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &jatek::button2_Click);
@@ -210,6 +223,7 @@ namespace Loimgui {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(139, 26);
 			this->button3->TabIndex = 4;
+			this->button3->TabStop = false;
 			this->button3->Text = L"Közönség";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &jatek::button3_Click);
@@ -221,6 +235,7 @@ namespace Loimgui {
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(139, 26);
 			this->button4->TabIndex = 5;
+			this->button4->TabStop = false;
 			this->button4->Text = L"Megállás";
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &jatek::button4_Click);
@@ -232,6 +247,7 @@ namespace Loimgui {
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(219, 66);
 			this->button5->TabIndex = 6;
+			this->button5->TabStop = false;
 			this->button5->Text = L"button5";
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &jatek::button5_Click);
@@ -243,6 +259,7 @@ namespace Loimgui {
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(219, 66);
 			this->button6->TabIndex = 7;
+			this->button6->TabStop = false;
 			this->button6->Text = L"button6";
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &jatek::button6_Click);
@@ -254,6 +271,7 @@ namespace Loimgui {
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(219, 66);
 			this->button7->TabIndex = 8;
+			this->button7->TabStop = false;
 			this->button7->Text = L"button7";
 			this->button7->UseVisualStyleBackColor = true;
 			this->button7->Click += gcnew System::EventHandler(this, &jatek::button7_Click);
@@ -265,15 +283,26 @@ namespace Loimgui {
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(219, 66);
 			this->button8->TabIndex = 9;
+			this->button8->TabStop = false;
 			this->button8->Text = L"button8";
 			this->button8->UseVisualStyleBackColor = true;
 			this->button8->Click += gcnew System::EventHandler(this, &jatek::button8_Click);
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Location = System::Drawing::Point(40, 29);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(46, 17);
+			this->label3->TabIndex = 10;
+			this->label3->Text = L"label3";
 			// 
 			// jatek
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(725, 495);
+			this->Controls->Add(this->label3);
 			this->Controls->Add(this->button8);
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->button6);
@@ -284,7 +313,10 @@ namespace Loimgui {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"jatek";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->ResumeLayout(false);
@@ -462,7 +494,7 @@ namespace Loimgui {
 			int vege = 0;
 			
 			String^ igazinev = marshal_as<String^>(nev);
-			while (!vege) {//Csak akkor lép ki, hogyha a vege=1, tehát, ha megnyerted a játékot, megálltál vagy rossz választ adtál			 
+			//while (!vege) {//Csak akkor lép ki, hogyha a vege=1, tehát, ha megnyerted a játékot, megálltál vagy rossz választ adtál			 
 				if (av == 0) {
 					do {
 						ok = 1;
@@ -481,13 +513,14 @@ namespace Loimgui {
 					msclr::interop::marshal_context context;
 					label1->Text = marshal_as<String^>(std::to_string(conductor->nehez));
 					label2->Text = marshal_as<String^>(conductor->kerdes);
+					label3->Text = marshal_as<String^>(conductor->kategoria);
 					button5->Text = marshal_as<String^>(conductor->a);
 					button6->Text = marshal_as<String^>(conductor->b);
 					button7->Text = marshal_as<String^>(conductor->c);
 					button8->Text = marshal_as<String^>(conductor->d);
 				}
 
-				if (av != 0) {
+				else {
 					valaszbetu = std::to_string(av + 64);
 					if (valaszbetu == "65") {
 						valaszbetu = "A";
@@ -510,26 +543,26 @@ namespace Loimgui {
 						if (nehezseg > 10 && nehezseg <= 15) { MessageBox::Show(igazinev + " ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " + marshal_as<String^>(conductor->valasz) + " lett volna!\tA nyereménye: " + nyeremeny[10] + "\n", "Sajnáljuk!", MessageBoxButtons::OK, MessageBoxIcon::Stop);  nyeremenyjatekos = nyeremeny[10]; }
 						//Az eddigi nyereménye
 						vege = 1;
-						toplistafg(jatekosnev2);
+						toplistafg(igazinev);
 						this->Close();
 					}
-					else if (nehezseg == 15 /*(valaszbetu.compare(conductor->valasz) == 0)*/) {
+					else if (nehezseg == 15) {
 
 						MessageBox::Show(igazinev + " ön megnyerte a játék fõdíját ami nem más mint " + nyeremeny[nehezseg] + " FT!",
 							"Gratulálunk!", MessageBoxButtons::OK,
-							MessageBoxIcon::Information);						
+							MessageBoxIcon::Information);
 						nyeremenyjatekos = nyeremeny[nehezseg];
 						vege = 1;
-						toplistafg(jatekosnev2);
+						toplistafg(igazinev);
 						this->Close();
 					}
 					else if (megallt == true) {
 						nyeremenyjatekos = nyeremeny[nehezseg - 1];
 						MessageBox::Show(igazinev + " ön megállt a nyereménye: " + nyeremeny[nehezseg - 1] + " FT!",
 							"Gratulálunk!", MessageBoxButtons::OK,
-							MessageBoxIcon::Information);						
+							MessageBoxIcon::Information);
 						vege = 1;
-						toplistafg(jatekosnev2);
+						toplistafg(igazinev);
 						this->Close();
 					}
 					else {
@@ -539,47 +572,47 @@ namespace Loimgui {
 						nyeremenyjatekos = nyeremeny[nehezseg];
 					}
 					nehezseg++;
+					if (vege != 1) {
+						do {
+							ok = 1;
+							k = nehez[nehezseg - 1] + rand() % (nehez[nehezseg] - nehez[nehezseg - 1]);//Kirandomolja a kérdést, nehézség szerint
+						} while (!ok);
 
-					do {
-						ok = 1;
-						k = nehez[nehezseg - 1] + rand() % (nehez[nehezseg] - nehez[nehezseg - 1]);//Kirandomolja a kérdést, nehézség szerint
-					} while (!ok);
+						conductor = root;
+						i = 0;
 
-					conductor = root;
-					i = 0;
+						while (i < k) {
+							conductor = conductor->next;
+							i++;
+						}
 
-					while (i < k) {
-						conductor = conductor->next;
-						i++;
+						MessageBox::Show(marshal_as<String^>(conductor->valasz));
+						msclr::interop::marshal_context context;
+						label1->Text = marshal_as<String^>(std::to_string(conductor->nehez));
+						label2->Text = marshal_as<String^>(conductor->kerdes);
+						label3->Text = marshal_as<String^>(conductor->kategoria);
+						button5->Text = marshal_as<String^>(conductor->a);
+						button6->Text = marshal_as<String^>(conductor->b);
+						button7->Text = marshal_as<String^>(conductor->c);
+						button8->Text = marshal_as<String^>(conductor->d);
+						button5->Visible = true; button6->Visible = true; button7->Visible = true; button8->Visible = true;
 					}
-					
-
-					msclr::interop::marshal_context context;
-					label1->Text = marshal_as<String^>(std::to_string(conductor->nehez));
-					label2->Text = marshal_as<String^>(conductor->kerdes);
-					button5->Text = marshal_as<String^>(conductor->a);
-					button6->Text = marshal_as<String^>(conductor->b);
-					button7->Text = marshal_as<String^>(conductor->c);
-					button8->Text = marshal_as<String^>(conductor->d);
-					button5->Visible = true; button6->Visible = true; button7->Visible = true; button8->Visible = true;
+					time(&veg); tido = difftime(veg, kezdet);
 				}
-				vege = 1;
-				time(&veg); tido = difftime(veg, kezdet);
-
 			}
 			
-		}
+		/*}*/
 
-		void toplistafg(std::string nev) {
+		void toplistafg(String^ nev) {
 			if (rangsordb != 10) {
-				adatok[rangsordb].nev = nev;
+				adatok[rangsordb].nev = marshal_as<std::string>(nev);
 				adatok[rangsordb].nyeremeny = nyeremenyjatekos;
 				adatok[rangsordb].ido = tido;
 				rangsordb++;
 			}
 			else {
 				if (nyeremenyjatekos >= adatok[rangsordb - 1].nyeremeny) {
-					adatok[rangsordb - 1].nev, nev;
+					adatok[rangsordb - 1].nev = marshal_as<std::string>(nev);
 					adatok[rangsordb - 1].nyeremeny = nyeremenyjatekos;
 					adatok[rangsordb - 1].ido = tido;
 				}
@@ -705,22 +738,28 @@ namespace Loimgui {
 	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
 		setvalasz(2);
 		szerintem(jatekosnev2, av);
+		label1->Focus();
 	}
 	private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
 		setvalasz(3);
 		szerintem(jatekosnev2, av);
+		label1->Focus();
 	}
 	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
 		setvalasz(4);
 		szerintem(jatekosnev2, av);
+		label1->Focus();
 	}
 	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 		megallt = true;
 		szerintem(jatekosnev2, av = 1);
+		label1->Focus();
+
 	}
 	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
 		setvalasz(1);
 		szerintem(jatekosnev2, av);
+		label1->Focus();
 	}
 
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -836,7 +875,7 @@ namespace Loimgui {
 				}
 			}
 		}
-
+		label1->Focus();
 	}
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 
@@ -902,6 +941,7 @@ namespace Loimgui {
 					MessageBoxIcon::Information);
 			}
 		}
+		label1->Focus();
 	}
 
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -954,6 +994,7 @@ namespace Loimgui {
 					MessageBoxIcon::Information);
 			}
 		}
+		label1->Focus();
 	}
 	};
 }
