@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <iostream>
 #include <string>
 #include <stdio.h>
@@ -124,7 +124,91 @@ namespace Loimgui {
 			}
 			dbjatek--;
 		}
-		static int dbjatek = 0;
+	private: System::Windows::Forms::Label^  label4;
+	protected:
+	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::TableLayoutPanel^  tableLayoutPanel1;
+	private: System::Windows::Forms::Label^  label52;
+	private: System::Windows::Forms::Label^  label51;
+	private: System::Windows::Forms::Label^  label50;
+	private: System::Windows::Forms::Label^  label49;
+	private: System::Windows::Forms::Label^  label48;
+	private: System::Windows::Forms::Label^  label47;
+	private: System::Windows::Forms::Label^  label46;
+	private: System::Windows::Forms::Label^  label45;
+	private: System::Windows::Forms::Label^  label44;
+	private: System::Windows::Forms::Label^  label43;
+	private: System::Windows::Forms::Label^  label42;
+	private: System::Windows::Forms::Label^  label41;
+	private: System::Windows::Forms::Label^  label40;
+	private: System::Windows::Forms::Label^  label39;
+	private: System::Windows::Forms::Label^  label38;
+	private: System::Windows::Forms::Label^  label37;
+	private: System::Windows::Forms::Label^  label36;
+	private: System::Windows::Forms::Label^  label35;
+	private: System::Windows::Forms::Label^  label34;
+	private: System::Windows::Forms::Label^  label33;
+	private: System::Windows::Forms::Label^  label32;
+	private: System::Windows::Forms::Label^  label31;
+	private: System::Windows::Forms::Label^  label30;
+	private: System::Windows::Forms::Label^  label29;
+	private: System::Windows::Forms::Label^  label28;
+	private: System::Windows::Forms::Label^  label27;
+	private: System::Windows::Forms::Label^  label26;
+	private: System::Windows::Forms::Label^  label25;
+	private: System::Windows::Forms::Label^  label24;
+	private: System::Windows::Forms::Label^  label23;
+	private: System::Windows::Forms::Label^  label22;
+	private: System::Windows::Forms::Label^  label21;
+	private: System::Windows::Forms::Label^  label20;
+	private: System::Windows::Forms::Label^  label19;
+	private: System::Windows::Forms::Label^  label18;
+	private: System::Windows::Forms::Label^  label17;
+	private: System::Windows::Forms::Label^  label16;
+	private: System::Windows::Forms::Label^  label15;
+	private: System::Windows::Forms::Label^  label14;
+	private: System::Windows::Forms::Label^  label13;
+	private: System::Windows::Forms::Label^  label12;
+	private: System::Windows::Forms::Label^  label11;
+	private: System::Windows::Forms::Label^  label10;
+	private: System::Windows::Forms::Label^  label9;
+	private: System::Windows::Forms::Label^  label8;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			 static int dbjatek = 0;
 		void dbjatekplus() {
 			dbjatek++;
 		}
@@ -172,6 +256,57 @@ namespace Loimgui {
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->tableLayoutPanel1 = (gcnew System::Windows::Forms::TableLayoutPanel());
+			this->label52 = (gcnew System::Windows::Forms::Label());
+			this->label51 = (gcnew System::Windows::Forms::Label());
+			this->label50 = (gcnew System::Windows::Forms::Label());
+			this->label49 = (gcnew System::Windows::Forms::Label());
+			this->label48 = (gcnew System::Windows::Forms::Label());
+			this->label47 = (gcnew System::Windows::Forms::Label());
+			this->label46 = (gcnew System::Windows::Forms::Label());
+			this->label45 = (gcnew System::Windows::Forms::Label());
+			this->label44 = (gcnew System::Windows::Forms::Label());
+			this->label43 = (gcnew System::Windows::Forms::Label());
+			this->label42 = (gcnew System::Windows::Forms::Label());
+			this->label41 = (gcnew System::Windows::Forms::Label());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->label38 = (gcnew System::Windows::Forms::Label());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->label36 = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->label28 = (gcnew System::Windows::Forms::Label());
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->label25 = (gcnew System::Windows::Forms::Label());
+			this->label24 = (gcnew System::Windows::Forms::Label());
+			this->label23 = (gcnew System::Windows::Forms::Label());
+			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->label21 = (gcnew System::Windows::Forms::Label());
+			this->label20 = (gcnew System::Windows::Forms::Label());
+			this->label19 = (gcnew System::Windows::Forms::Label());
+			this->label18 = (gcnew System::Windows::Forms::Label());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->label11 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->tableLayoutPanel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// label1
@@ -200,7 +335,7 @@ namespace Loimgui {
 			this->button1->Size = System::Drawing::Size(139, 26);
 			this->button1->TabIndex = 2;
 			this->button1->TabStop = false;
-			this->button1->Text = L"Felezés";
+			this->button1->Text = L"FelezÃ©s";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &jatek::button1_Click);
 			// 
@@ -212,7 +347,7 @@ namespace Loimgui {
 			this->button2->Size = System::Drawing::Size(139, 26);
 			this->button2->TabIndex = 3;
 			this->button2->TabStop = false;
-			this->button2->Text = L"Telefonos segítség";
+			this->button2->Text = L"Telefonos segÃ­tsÃ©g";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &jatek::button2_Click);
 			// 
@@ -224,7 +359,7 @@ namespace Loimgui {
 			this->button3->Size = System::Drawing::Size(139, 26);
 			this->button3->TabIndex = 4;
 			this->button3->TabStop = false;
-			this->button3->Text = L"Közönség";
+			this->button3->Text = L"KÃ¶zÃ¶nsÃ©g";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &jatek::button3_Click);
 			// 
@@ -236,7 +371,7 @@ namespace Loimgui {
 			this->button4->Size = System::Drawing::Size(139, 26);
 			this->button4->TabIndex = 5;
 			this->button4->TabStop = false;
-			this->button4->Text = L"Megállás";
+			this->button4->Text = L"MegÃ¡llÃ¡s";
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &jatek::button4_Click);
 			// 
@@ -297,11 +432,559 @@ namespace Loimgui {
 			this->label3->TabIndex = 10;
 			this->label3->Text = L"label3";
 			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(33, 242);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(22, 17);
+			this->label4->TabIndex = 11;
+			this->label4->Text = L"A)";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(406, 242);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(22, 17);
+			this->label5->TabIndex = 12;
+			this->label5->Text = L"B)";
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(33, 347);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(22, 17);
+			this->label6->TabIndex = 13;
+			this->label6->Text = L"C)";
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(404, 347);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(23, 17);
+			this->label7->TabIndex = 14;
+			this->label7->Text = L"D)";
+			// 
+			// tableLayoutPanel1
+			// 
+			this->tableLayoutPanel1->ColumnCount = 3;
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				20)));
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				10)));
+			this->tableLayoutPanel1->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent,
+				70)));
+			this->tableLayoutPanel1->Controls->Add(this->label52, 2, 14);
+			this->tableLayoutPanel1->Controls->Add(this->label51, 1, 14);
+			this->tableLayoutPanel1->Controls->Add(this->label50, 0, 14);
+			this->tableLayoutPanel1->Controls->Add(this->label49, 2, 13);
+			this->tableLayoutPanel1->Controls->Add(this->label48, 1, 13);
+			this->tableLayoutPanel1->Controls->Add(this->label47, 0, 13);
+			this->tableLayoutPanel1->Controls->Add(this->label46, 2, 12);
+			this->tableLayoutPanel1->Controls->Add(this->label45, 1, 12);
+			this->tableLayoutPanel1->Controls->Add(this->label44, 0, 12);
+			this->tableLayoutPanel1->Controls->Add(this->label43, 2, 11);
+			this->tableLayoutPanel1->Controls->Add(this->label42, 1, 11);
+			this->tableLayoutPanel1->Controls->Add(this->label41, 0, 11);
+			this->tableLayoutPanel1->Controls->Add(this->label40, 2, 10);
+			this->tableLayoutPanel1->Controls->Add(this->label39, 1, 10);
+			this->tableLayoutPanel1->Controls->Add(this->label38, 0, 10);
+			this->tableLayoutPanel1->Controls->Add(this->label37, 2, 9);
+			this->tableLayoutPanel1->Controls->Add(this->label36, 1, 9);
+			this->tableLayoutPanel1->Controls->Add(this->label35, 0, 9);
+			this->tableLayoutPanel1->Controls->Add(this->label34, 2, 8);
+			this->tableLayoutPanel1->Controls->Add(this->label33, 1, 8);
+			this->tableLayoutPanel1->Controls->Add(this->label32, 0, 8);
+			this->tableLayoutPanel1->Controls->Add(this->label31, 2, 7);
+			this->tableLayoutPanel1->Controls->Add(this->label30, 1, 7);
+			this->tableLayoutPanel1->Controls->Add(this->label29, 0, 7);
+			this->tableLayoutPanel1->Controls->Add(this->label28, 2, 6);
+			this->tableLayoutPanel1->Controls->Add(this->label27, 1, 6);
+			this->tableLayoutPanel1->Controls->Add(this->label26, 0, 6);
+			this->tableLayoutPanel1->Controls->Add(this->label25, 2, 5);
+			this->tableLayoutPanel1->Controls->Add(this->label24, 1, 5);
+			this->tableLayoutPanel1->Controls->Add(this->label23, 0, 5);
+			this->tableLayoutPanel1->Controls->Add(this->label22, 2, 4);
+			this->tableLayoutPanel1->Controls->Add(this->label21, 1, 4);
+			this->tableLayoutPanel1->Controls->Add(this->label20, 0, 4);
+			this->tableLayoutPanel1->Controls->Add(this->label19, 2, 3);
+			this->tableLayoutPanel1->Controls->Add(this->label18, 1, 3);
+			this->tableLayoutPanel1->Controls->Add(this->label17, 0, 3);
+			this->tableLayoutPanel1->Controls->Add(this->label16, 2, 2);
+			this->tableLayoutPanel1->Controls->Add(this->label15, 1, 2);
+			this->tableLayoutPanel1->Controls->Add(this->label14, 0, 2);
+			this->tableLayoutPanel1->Controls->Add(this->label13, 2, 1);
+			this->tableLayoutPanel1->Controls->Add(this->label12, 1, 1);
+			this->tableLayoutPanel1->Controls->Add(this->label11, 0, 1);
+			this->tableLayoutPanel1->Controls->Add(this->label10, 2, 0);
+			this->tableLayoutPanel1->Controls->Add(this->label9, 1, 0);
+			this->tableLayoutPanel1->Controls->Add(this->label8, 0, 0);
+			this->tableLayoutPanel1->Location = System::Drawing::Point(748, 29);
+			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
+			this->tableLayoutPanel1->RowCount = 15;
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 6.666668F)));
+			this->tableLayoutPanel1->Size = System::Drawing::Size(224, 427);
+			this->tableLayoutPanel1->TabIndex = 15;
+			// 
+			// label52
+			// 
+			this->label52->AutoSize = true;
+			this->label52->Location = System::Drawing::Point(69, 392);
+			this->label52->Name = L"label52";
+			this->label52->Size = System::Drawing::Size(60, 17);
+			this->label52->TabIndex = 44;
+			this->label52->Text = L"5 000 Ft";
+			// 
+			// label51
+			// 
+			this->label51->AutoSize = true;
+			this->label51->Location = System::Drawing::Point(47, 392);
+			this->label51->Name = L"label51";
+			this->label51->Size = System::Drawing::Size(16, 17);
+			this->label51->TabIndex = 43;
+			this->label51->Text = L"â¯";
+			this->label51->Visible = false;
+			// 
+			// label50
+			// 
+			this->label50->AutoSize = true;
+			this->label50->Location = System::Drawing::Point(3, 392);
+			this->label50->Name = L"label50";
+			this->label50->Size = System::Drawing::Size(16, 17);
+			this->label50->TabIndex = 42;
+			this->label50->Text = L"1";
+			// 
+			// label49
+			// 
+			this->label49->AutoSize = true;
+			this->label49->Location = System::Drawing::Point(69, 364);
+			this->label49->Name = L"label49";
+			this->label49->Size = System::Drawing::Size(68, 17);
+			this->label49->TabIndex = 41;
+			this->label49->Text = L"10 000 Ft";
+			// 
+			// label48
+			// 
+			this->label48->AutoSize = true;
+			this->label48->Location = System::Drawing::Point(47, 364);
+			this->label48->Name = L"label48";
+			this->label48->Size = System::Drawing::Size(16, 17);
+			this->label48->TabIndex = 40;
+			this->label48->Text = L"â¯";
+			this->label48->Visible = false;
+			// 
+			// label47
+			// 
+			this->label47->AutoSize = true;
+			this->label47->Location = System::Drawing::Point(3, 364);
+			this->label47->Name = L"label47";
+			this->label47->Size = System::Drawing::Size(16, 17);
+			this->label47->TabIndex = 39;
+			this->label47->Text = L"2";
+			// 
+			// label46
+			// 
+			this->label46->AutoSize = true;
+			this->label46->Location = System::Drawing::Point(69, 336);
+			this->label46->Name = L"label46";
+			this->label46->Size = System::Drawing::Size(68, 17);
+			this->label46->TabIndex = 38;
+			this->label46->Text = L"25 000 Ft";
+			// 
+			// label45
+			// 
+			this->label45->AutoSize = true;
+			this->label45->Location = System::Drawing::Point(47, 336);
+			this->label45->Name = L"label45";
+			this->label45->Size = System::Drawing::Size(16, 17);
+			this->label45->TabIndex = 37;
+			this->label45->Text = L"â¯";
+			this->label45->Visible = false;
+			// 
+			// label44
+			// 
+			this->label44->AutoSize = true;
+			this->label44->Location = System::Drawing::Point(3, 336);
+			this->label44->Name = L"label44";
+			this->label44->Size = System::Drawing::Size(16, 17);
+			this->label44->TabIndex = 36;
+			this->label44->Text = L"3";
+			// 
+			// label43
+			// 
+			this->label43->AutoSize = true;
+			this->label43->Location = System::Drawing::Point(69, 308);
+			this->label43->Name = L"label43";
+			this->label43->Size = System::Drawing::Size(68, 17);
+			this->label43->TabIndex = 35;
+			this->label43->Text = L"50 000 Ft";
+			// 
+			// label42
+			// 
+			this->label42->AutoSize = true;
+			this->label42->Location = System::Drawing::Point(47, 308);
+			this->label42->Name = L"label42";
+			this->label42->Size = System::Drawing::Size(16, 17);
+			this->label42->TabIndex = 34;
+			this->label42->Text = L"â¯";
+			this->label42->Visible = false;
+			// 
+			// label41
+			// 
+			this->label41->AutoSize = true;
+			this->label41->Location = System::Drawing::Point(3, 308);
+			this->label41->Name = L"label41";
+			this->label41->Size = System::Drawing::Size(16, 17);
+			this->label41->TabIndex = 33;
+			this->label41->Text = L"4";
+			// 
+			// label40
+			// 
+			this->label40->AutoSize = true;
+			this->label40->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label40->Location = System::Drawing::Point(69, 280);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(86, 17);
+			this->label40->TabIndex = 32;
+			this->label40->Text = L"100 000 Ft";
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Location = System::Drawing::Point(47, 280);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(16, 17);
+			this->label39->TabIndex = 31;
+			this->label39->Text = L"â¯";
+			this->label39->Visible = false;
+			// 
+			// label38
+			// 
+			this->label38->AutoSize = true;
+			this->label38->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label38->Location = System::Drawing::Point(3, 280);
+			this->label38->Name = L"label38";
+			this->label38->Size = System::Drawing::Size(17, 17);
+			this->label38->TabIndex = 30;
+			this->label38->Text = L"5";
+			// 
+			// label37
+			// 
+			this->label37->AutoSize = true;
+			this->label37->Location = System::Drawing::Point(69, 252);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(76, 17);
+			this->label37->TabIndex = 29;
+			this->label37->Text = L"200 000 Ft";
+			// 
+			// label36
+			// 
+			this->label36->AutoSize = true;
+			this->label36->Location = System::Drawing::Point(47, 252);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(16, 17);
+			this->label36->TabIndex = 28;
+			this->label36->Text = L"â¯";
+			this->label36->Visible = false;
+			// 
+			// label35
+			// 
+			this->label35->AutoSize = true;
+			this->label35->Location = System::Drawing::Point(3, 252);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(16, 17);
+			this->label35->TabIndex = 27;
+			this->label35->Text = L"6";
+			// 
+			// label34
+			// 
+			this->label34->AutoSize = true;
+			this->label34->Location = System::Drawing::Point(69, 224);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(76, 17);
+			this->label34->TabIndex = 26;
+			this->label34->Text = L"300 000 Ft";
+			// 
+			// label33
+			// 
+			this->label33->AutoSize = true;
+			this->label33->Location = System::Drawing::Point(47, 224);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(16, 17);
+			this->label33->TabIndex = 25;
+			this->label33->Text = L"â¯";
+			this->label33->Visible = false;
+			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->label32->Location = System::Drawing::Point(3, 224);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(16, 17);
+			this->label32->TabIndex = 24;
+			this->label32->Text = L"7";
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Location = System::Drawing::Point(69, 196);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(76, 17);
+			this->label31->TabIndex = 23;
+			this->label31->Text = L"500 000 Ft";
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->Location = System::Drawing::Point(47, 196);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(16, 17);
+			this->label30->TabIndex = 22;
+			this->label30->Text = L"â¯";
+			this->label30->Visible = false;
+			// 
+			// label29
+			// 
+			this->label29->AutoSize = true;
+			this->label29->Location = System::Drawing::Point(3, 196);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(16, 17);
+			this->label29->TabIndex = 21;
+			this->label29->Text = L"8";
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Location = System::Drawing::Point(69, 168);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(76, 17);
+			this->label28->TabIndex = 20;
+			this->label28->Text = L"800 000 Ft";
+			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->Location = System::Drawing::Point(47, 168);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(16, 17);
+			this->label27->TabIndex = 19;
+			this->label27->Text = L"â¯";
+			this->label27->Visible = false;
+			// 
+			// label26
+			// 
+			this->label26->AutoSize = true;
+			this->label26->Location = System::Drawing::Point(3, 168);
+			this->label26->Name = L"label26";
+			this->label26->Size = System::Drawing::Size(16, 17);
+			this->label26->TabIndex = 18;
+			this->label26->Text = L"9";
+			// 
+			// label25
+			// 
+			this->label25->AutoSize = true;
+			this->label25->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label25->Location = System::Drawing::Point(69, 140);
+			this->label25->Name = L"label25";
+			this->label25->Size = System::Drawing::Size(100, 17);
+			this->label25->TabIndex = 17;
+			this->label25->Text = L"1 500 000 Ft";
+			// 
+			// label24
+			// 
+			this->label24->AutoSize = true;
+			this->label24->Location = System::Drawing::Point(47, 140);
+			this->label24->Name = L"label24";
+			this->label24->Size = System::Drawing::Size(16, 17);
+			this->label24->TabIndex = 16;
+			this->label24->Text = L"â¯";
+			this->label24->Visible = false;
+			// 
+			// label23
+			// 
+			this->label23->AutoSize = true;
+			this->label23->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label23->Location = System::Drawing::Point(3, 140);
+			this->label23->Name = L"label23";
+			this->label23->Size = System::Drawing::Size(26, 17);
+			this->label23->TabIndex = 15;
+			this->label23->Text = L"10";
+			// 
+			// label22
+			// 
+			this->label22->AutoSize = true;
+			this->label22->Location = System::Drawing::Point(69, 112);
+			this->label22->Name = L"label22";
+			this->label22->Size = System::Drawing::Size(88, 17);
+			this->label22->TabIndex = 14;
+			this->label22->Text = L"3 000 000 Ft";
+			// 
+			// label21
+			// 
+			this->label21->AutoSize = true;
+			this->label21->Location = System::Drawing::Point(47, 112);
+			this->label21->Name = L"label21";
+			this->label21->Size = System::Drawing::Size(16, 17);
+			this->label21->TabIndex = 13;
+			this->label21->Text = L"â¯";
+			this->label21->Visible = false;
+			// 
+			// label20
+			// 
+			this->label20->AutoSize = true;
+			this->label20->Location = System::Drawing::Point(3, 112);
+			this->label20->Name = L"label20";
+			this->label20->Size = System::Drawing::Size(24, 17);
+			this->label20->TabIndex = 12;
+			this->label20->Text = L"11";
+			// 
+			// label19
+			// 
+			this->label19->AutoSize = true;
+			this->label19->Location = System::Drawing::Point(69, 84);
+			this->label19->Name = L"label19";
+			this->label19->Size = System::Drawing::Size(88, 17);
+			this->label19->TabIndex = 11;
+			this->label19->Text = L"5 000 000 Ft";
+			// 
+			// label18
+			// 
+			this->label18->AutoSize = true;
+			this->label18->Location = System::Drawing::Point(47, 84);
+			this->label18->Name = L"label18";
+			this->label18->Size = System::Drawing::Size(16, 17);
+			this->label18->TabIndex = 10;
+			this->label18->Text = L"â¯";
+			this->label18->Visible = false;
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(3, 84);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(24, 17);
+			this->label17->TabIndex = 9;
+			this->label17->Text = L"12";
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(69, 56);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(96, 17);
+			this->label16->TabIndex = 8;
+			this->label16->Text = L"10 000 000 Ft";
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(47, 56);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(16, 17);
+			this->label15->TabIndex = 7;
+			this->label15->Text = L"â¯";
+			this->label15->Visible = false;
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(3, 56);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(24, 17);
+			this->label14->TabIndex = 6;
+			this->label14->Text = L"13";
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(69, 28);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(96, 17);
+			this->label13->TabIndex = 5;
+			this->label13->Text = L"20 000 000 Ft";
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(47, 28);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(16, 17);
+			this->label12->TabIndex = 4;
+			this->label12->Text = L"â¯";
+			this->label12->Visible = false;
+			// 
+			// label11
+			// 
+			this->label11->AutoSize = true;
+			this->label11->Location = System::Drawing::Point(3, 28);
+			this->label11->Name = L"label11";
+			this->label11->Size = System::Drawing::Size(24, 17);
+			this->label11->TabIndex = 3;
+			this->label11->Text = L"14";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label10->Location = System::Drawing::Point(69, 0);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(109, 17);
+			this->label10->TabIndex = 2;
+			this->label10->Text = L"40 000 000 Ft";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(47, 0);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(16, 17);
+			this->label9->TabIndex = 1;
+			this->label9->Text = L"â¯";
+			this->label9->Visible = false;
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->label8->Location = System::Drawing::Point(3, 0);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(26, 17);
+			this->label8->TabIndex = 0;
+			this->label8->Text = L"15";
+			// 
 			// jatek
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(725, 495);
+			this->ClientSize = System::Drawing::Size(1003, 495);
+			this->Controls->Add(this->tableLayoutPanel1);
+			this->Controls->Add(this->label7);
+			this->Controls->Add(this->label6);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->button8);
 			this->Controls->Add(this->button7);
@@ -319,19 +1002,21 @@ namespace Loimgui {
 			this->MinimizeBox = false;
 			this->Name = L"jatek";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->tableLayoutPanel1->ResumeLayout(false);
+			this->tableLayoutPanel1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 		void beolvas(String^ nev) {
-			this->Text = nev + " Legyen Ön is Milliomos!";
+			this->Text = nev + " Legyen Ã–n is Milliomos!";
 			srand(time(NULL));
 			if (kes == 0) {
 				kes++;
 
 				std::ifstream myfile("loim.csv");
 				if (myfile.fail()) {
-					std::cerr << "A loim.csv fájl nem nyitható meg!";
+					std::cerr << "A loim.csv fÃ¡jl nem nyithatÃ³ meg!";
 					exit(1);
 				}
 				if (myfile.is_open())
@@ -443,7 +1128,7 @@ namespace Loimgui {
 					}
 					std::ifstream toplista("toplista.txt");
 					if (toplista.fail()) {
-						std::cerr << "A toplista.txt fájl nem nyitható meg!";
+						std::cerr << "A toplista.txt fÃ¡jl nem nyithatÃ³ meg!";
 						exit(1);
 					}
 				
@@ -494,11 +1179,11 @@ namespace Loimgui {
 			int vege = 0;
 			
 			String^ igazinev = marshal_as<String^>(nev);
-			//while (!vege) {//Csak akkor lép ki, hogyha a vege=1, tehát, ha megnyerted a játékot, megálltál vagy rossz választ adtál			 
+			//while (!vege) {//Csak akkor lÃ©p ki, hogyha a vege=1, tehÃ¡t, ha megnyerted a jÃ¡tÃ©kot, megÃ¡lltÃ¡l vagy rossz vÃ¡laszt adtÃ¡l			 
 				if (av == 0) {
 					do {
 						ok = 1;
-						k = nehez[nehezseg - 1] + rand() % (nehez[nehezseg] - nehez[nehezseg - 1]);//Kirandomolja a kérdést, nehézség szerint
+						k = nehez[nehezseg - 1] + rand() % (nehez[nehezseg] - nehez[nehezseg - 1]);//Kirandomolja a kÃ©rdÃ©st, nehÃ©zsÃ©g szerint
 					} while (!ok);
 
 					conductor = root;
@@ -538,18 +1223,18 @@ namespace Loimgui {
 
 					if (((conductor->valasz) != valaszbetu) && (megallt == false)) {
 
-						if (nehezseg <= 5) { MessageBox::Show(igazinev + " ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " + marshal_as<String^>(conductor->valasz) + " lett volna!\tA nyereménye: " + nyeremeny[0] + "\n", "Sajnáljuk!", MessageBoxButtons::OK, MessageBoxIcon::Stop);  nyeremenyjatekos = nyeremeny[0]; }
-						if (nehezseg > 5 && nehezseg <= 10) { MessageBox::Show(igazinev + " ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " + marshal_as<String^>(conductor->valasz) + " lett volna!\tA nyereménye: " + nyeremeny[5] + "\n", "Sajnáljuk!", MessageBoxButtons::OK, MessageBoxIcon::Stop);  nyeremenyjatekos = nyeremeny[5]; }
-						if (nehezseg > 10 && nehezseg <= 15) { MessageBox::Show(igazinev + " ön kiesett játékunkból, mivel helytelen választ adott!\nA helyes válasz " + marshal_as<String^>(conductor->valasz) + " lett volna!\tA nyereménye: " + nyeremeny[10] + "\n", "Sajnáljuk!", MessageBoxButtons::OK, MessageBoxIcon::Stop);  nyeremenyjatekos = nyeremeny[10]; }
-						//Az eddigi nyereménye
+						if (nehezseg <= 5) { MessageBox::Show(igazinev + " Ã¶n kiesett jÃ¡tÃ©kunkbÃ³l, mivel helytelen vÃ¡laszt adott!\nA helyes vÃ¡lasz " + marshal_as<String^>(conductor->valasz) + " lett volna!\tA nyeremÃ©nye: " + nyeremeny[0] + "\n", "SajnÃ¡ljuk!", MessageBoxButtons::OK, MessageBoxIcon::Stop);  nyeremenyjatekos = nyeremeny[0]; }
+						if (nehezseg > 5 && nehezseg <= 10) { MessageBox::Show(igazinev + " Ã¶n kiesett jÃ¡tÃ©kunkbÃ³l, mivel helytelen vÃ¡laszt adott!\nA helyes vÃ¡lasz " + marshal_as<String^>(conductor->valasz) + " lett volna!\tA nyeremÃ©nye: " + nyeremeny[5] + "\n", "SajnÃ¡ljuk!", MessageBoxButtons::OK, MessageBoxIcon::Stop);  nyeremenyjatekos = nyeremeny[5]; }
+						if (nehezseg > 10 && nehezseg <= 15) { MessageBox::Show(igazinev + " Ã¶n kiesett jÃ¡tÃ©kunkbÃ³l, mivel helytelen vÃ¡laszt adott!\nA helyes vÃ¡lasz " + marshal_as<String^>(conductor->valasz) + " lett volna!\tA nyeremÃ©nye: " + nyeremeny[10] + "\n", "SajnÃ¡ljuk!", MessageBoxButtons::OK, MessageBoxIcon::Stop);  nyeremenyjatekos = nyeremeny[10]; }
+						//Az eddigi nyeremÃ©nye
 						vege = 1;
 						toplistafg(igazinev);
 						this->Close();
 					}
 					else if (nehezseg == 15) {
 
-						MessageBox::Show(igazinev + " ön megnyerte a játék fõdíját ami nem más mint " + nyeremeny[nehezseg] + " FT!",
-							"Gratulálunk!", MessageBoxButtons::OK,
+						MessageBox::Show(igazinev + " Ã¶n megnyerte a jÃ¡tÃ©k fÅ‘dÃ­jÃ¡t ami nem mÃ¡s mint " + nyeremeny[nehezseg] + " FT!",
+							"GratulÃ¡lunk!", MessageBoxButtons::OK,
 							MessageBoxIcon::Information);
 						nyeremenyjatekos = nyeremeny[nehezseg];
 						vege = 1;
@@ -558,24 +1243,55 @@ namespace Loimgui {
 					}
 					else if (megallt == true) {
 						nyeremenyjatekos = nyeremeny[nehezseg - 1];
-						MessageBox::Show(igazinev + " ön megállt a nyereménye: " + nyeremeny[nehezseg - 1] + " FT!",
-							"Gratulálunk!", MessageBoxButtons::OK,
+						MessageBox::Show(igazinev + " Ã¶n megÃ¡llt a nyeremÃ©nye: " + nyeremeny[nehezseg - 1] + " FT!",
+							"GratulÃ¡lunk!", MessageBoxButtons::OK,
 							MessageBoxIcon::Information);
 						vege = 1;
 						toplistafg(igazinev);
 						this->Close();
 					}
 					else {
-						MessageBox::Show(igazinev + " a válasza helyes aktuális nyereményalap " + nyeremeny[nehezseg] + " FT!",
-							"Gratulálunk!", MessageBoxButtons::OK,
+						MessageBox::Show(igazinev + " a vÃ¡lasza helyes aktuÃ¡lis nyeremÃ©nyalap " + nyeremeny[nehezseg] + " FT!",
+							"GratulÃ¡lunk!", MessageBoxButtons::OK,
 							MessageBoxIcon::Information);
 						nyeremenyjatekos = nyeremeny[nehezseg];
+						if (nehezseg == 1) {
+							label51->Visible = true;
+						}if (nehezseg == 2) {
+							label48->Visible = true;
+						}if (nehezseg == 3) {
+							label45->Visible = true;
+						}if (nehezseg == 4) {
+							label42->Visible = true;
+						}if (nehezseg == 5) {
+							label39->Visible = true;
+						}if (nehezseg == 6) {
+							label36->Visible = true;
+						}if (nehezseg == 7) {
+							label33->Visible = true;
+						}if (nehezseg == 8) {
+							label30->Visible = true;
+						}if (nehezseg == 9) {
+							label27->Visible = true;
+						}if (nehezseg == 10) {
+							label24->Visible = true;
+						}if (nehezseg == 11) {
+							label21->Visible = true;
+						}if (nehezseg == 12) {
+							label18->Visible = true;
+						}if (nehezseg == 14) {
+							label15->Visible = true;
+						}if (nehezseg == 14) {
+							label12->Visible = true;
+						}if (nehezseg == 15) {
+							label9->Visible = true;
+						}
 					}
 					nehezseg++;
 					if (vege != 1) {
 						do {
 							ok = 1;
-							k = nehez[nehezseg - 1] + rand() % (nehez[nehezseg] - nehez[nehezseg - 1]);//Kirandomolja a kérdést, nehézség szerint
+							k = nehez[nehezseg - 1] + rand() % (nehez[nehezseg] - nehez[nehezseg - 1]);//Kirandomolja a kÃ©rdÃ©st, nehÃ©zsÃ©g szerint
 						} while (!ok);
 
 						conductor = root;
@@ -586,7 +1302,6 @@ namespace Loimgui {
 							i++;
 						}
 
-						MessageBox::Show(marshal_as<String^>(conductor->valasz));
 						msclr::interop::marshal_context context;
 						label1->Text = marshal_as<String^>(std::to_string(conductor->nehez));
 						label2->Text = marshal_as<String^>(conductor->kerdes);
@@ -596,6 +1311,7 @@ namespace Loimgui {
 						button7->Text = marshal_as<String^>(conductor->c);
 						button8->Text = marshal_as<String^>(conductor->d);
 						button5->Visible = true; button6->Visible = true; button7->Visible = true; button8->Visible = true;
+						label4->Visible = true; label5->Visible = true; label6->Visible = true; label7->Visible = true;
 					}
 					time(&veg); tido = difftime(veg, kezdet);
 				}
@@ -619,7 +1335,7 @@ namespace Loimgui {
 			}
 			std::ofstream toplista("toplista.txt");
 			if (toplista.fail()) {
-				std::cerr << "A fájl nem nyitható meg!";
+				std::cerr << "A fÃ¡jl nem nyithatÃ³ meg!";
 				exit(1);
 			}
 			srendez(adatok, rangsordb);
@@ -765,14 +1481,14 @@ namespace Loimgui {
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 
 		setFelezSzint(conductor->nehez);
-		if (getFelezes() == 0)
+		/*if (getFelezes() == 0)
 		{
-			MessageBox::Show("Ezt a segítséget már elhasználta!",
-				"Hiba lépett fel!", MessageBoxButtons::OK,
+			MessageBox::Show("Ezt a segÃ­tsÃ©get mÃ¡r elhasznÃ¡lta!",
+				"Hiba lÃ©pett fel!", MessageBoxButtons::OK,
 				MessageBoxIcon::Error);
 		}
 		else
-		{
+		{*/
 			int ok = 1;
 			int val;
 			std::string rossz;
@@ -787,13 +1503,15 @@ namespace Loimgui {
 				}
 			}
 			/*system("cls");
-			std::cout << "A kérdés témaköre: " << conductor->kategoria << "\n\n";
+			std::cout << "A kÃ©rdÃ©s tÃ©makÃ¶re: " << conductor->kategoria << "\n\n";
 			std::cout << conductor->nehez << ". " << conductor->kerdes << "\n";*/
 			if (rossz.compare("A") == 0 && conductor->valasz.compare("B") == 0 || rossz.compare("B") == 0 && conductor->valasz.compare("A") == 0)
 			{
-				//std::cout << "(A) " << std::setw(30) << std::left << conductor->a << "(B)" << conductor->b << std::endl; //jó
+				//std::cout << "(A) " << std::setw(30) << std::left << conductor->a << "(B)" << conductor->b << std::endl; //jÃ³
 				button7->Visible = false;
 				button8->Visible = false;
+				label6->Visible = false;
+				label7->Visible = false;
 				if (conductor->valasz.compare("A") == 0)
 				{
 					setRossz('B');
@@ -808,6 +1526,8 @@ namespace Loimgui {
 				//std::cout << "(A) " << std::setw(30) << std::left << conductor->a << "\n(C) " << std::setw(30) << std::left << conductor->c << std::endl;
 				button6->Visible = false;
 				button8->Visible = false;
+				label5->Visible = false;
+				label7->Visible = false;
 				if (conductor->valasz.compare("A") == 0)
 				{
 					setRossz('C');
@@ -823,6 +1543,8 @@ namespace Loimgui {
 				//std::cout << "(A) " << std::setw(30) << std::left << conductor->a << std::endl << std::setw(30) << std::left << "" << "(D)" << conductor->d << std::endl;
 				button7->Visible = false;
 				button6->Visible = false;
+				label6->Visible = false;
+				label5->Visible = false;
 				if (conductor->valasz.compare("A") == 0)
 				{
 					setRossz('D');
@@ -837,6 +1559,8 @@ namespace Loimgui {
 				//std::cout << std::setw(30) << std::left << "" << "(B)" << conductor->b << "\n(C) " << std::setw(30) << std::left << conductor->c << std::endl;
 				button5->Visible = false;
 				button8->Visible = false;
+				label4->Visible = false;
+				label7->Visible = false;
 				if (conductor->valasz.compare("B") == 0)
 				{
 					setRossz('C');
@@ -851,6 +1575,8 @@ namespace Loimgui {
 				//std::cout << std::setw(30) << std::left << "" << "(B)" << conductor->b << std::endl << std::setw(30) << std::left << "" << "(D)" << conductor->d << std::endl;
 				button5->Visible = false;
 				button7->Visible = false;
+				label4->Visible = false;
+				label6->Visible = false;
 				if (conductor->valasz.compare("B") == 0)
 				{
 					setRossz('D');
@@ -865,6 +1591,8 @@ namespace Loimgui {
 				//std::cout << std::endl << "(C)" << std::setw(30) << std::left << conductor->c << "(D)" << conductor->d << std::endl;
 				button5->Visible = false;
 				button6->Visible = false;
+				label4->Visible = false;
+				label5->Visible = false;
 				if (conductor->valasz.compare("C") == 0)
 				{
 					setRossz('D');
@@ -874,20 +1602,21 @@ namespace Loimgui {
 					setRossz('C');
 				}
 			}
-		}
+		/*}*/
+		button1->Enabled = false;
 		label1->Focus();
 	}
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 
-		if (getTelefont() == 0)
-		{
-			//std::cout << "A telefon segítséget már elhasználta" << std::endl;
-			MessageBox::Show("Ezt a segítséget már elhasználta!",
-				"Hiba lépett fel!", MessageBoxButtons::OK,
-				MessageBoxIcon::Error);
-		}
-		else
-		{
+		//if (getTelefont() == 0)
+		//{
+		//	//std::cout << "A telefon segÃ­tsÃ©get mÃ¡r elhasznÃ¡lta" << std::endl;
+		//	MessageBox::Show("Ezt a segÃ­tsÃ©get mÃ¡r elhasznÃ¡lta!",
+		//		"Hiba lÃ©pett fel!", MessageBoxButtons::OK,
+		//		MessageBoxIcon::Error);
+		//}
+		//else
+		//{
 			setTelefon(0);
 			double t_tipp;
 			double rossz;
@@ -896,9 +1625,9 @@ namespace Loimgui {
 
 			t_tipp = (rand() % 100)*(1 + szint * 0, 01);
 			setTelefon(0);
-			/*std::cout << "Adja meg, hogy kit hívjunk fel" << std::endl;
+			/*std::cout << "Adja meg, hogy kit hÃ­vjunk fel" << std::endl;
 			std::getline(std::cin, nev);
-			std::cout << nev << " hívasa" << std::endl;
+			std::cout << nev << " hÃ­vasa" << std::endl;
 			for (int i = 0; i < 3; i++)
 			{
 			sleep(1);
@@ -911,9 +1640,9 @@ namespace Loimgui {
 				{
 					rossz = getRossz();
 					rossz = rossz - 65;
-					//std::cout << "Szerintem a helyes válasz: " << getRossz() << std::endl;
-					MessageBox::Show("A(z) " + BetuSzam2(rossz) + " szerintem a helyes válasz",
-						"Telefonos segítség", MessageBoxButtons::OK,
+					//std::cout << "Szerintem a helyes vÃ¡lasz: " << getRossz() << std::endl;
+					MessageBox::Show("A(z) " + BetuSzam2(rossz) + " szerintem a helyes vÃ¡lasz",
+						"Telefonos segÃ­tsÃ©g", MessageBoxButtons::OK,
 						MessageBoxIcon::Information);
 				}
 				else
@@ -923,9 +1652,9 @@ namespace Loimgui {
 						rossz = rand() % 4;
 						if (BetuSzam(rossz) == (conductor->valasz).at(0))
 						{
-							//std::cout << "Szerintem a helyes válasz: " << BetuSzam(rossz) << std::endl;
-							MessageBox::Show("A(z) " + BetuSzam2(rossz) + " szerintem a helyes válasz",
-								"Telefonos segítség", MessageBoxButtons::OK,
+							//std::cout << "Szerintem a helyes vÃ¡lasz: " << BetuSzam(rossz) << std::endl;
+							MessageBox::Show("A(z) " + BetuSzam2(rossz) + " szerintem a helyes vÃ¡lasz",
+								"Telefonos segÃ­tsÃ©g", MessageBoxButtons::OK,
 								MessageBoxIcon::Information);
 							ok = 1;
 						}
@@ -935,23 +1664,24 @@ namespace Loimgui {
 			}
 			else
 			{
-				//std::cout << "Szerintem a helyes válasz: " << conductor->valasz << std::endl;
-				MessageBox::Show("A(z) " + marshal_as<String^>(conductor->valasz) + " szerintem a helyes válasz",
-					"Telefonos segítség", MessageBoxButtons::OK,
+				//std::cout << "Szerintem a helyes vÃ¡lasz: " << conductor->valasz << std::endl;
+				MessageBox::Show("A(z) " + marshal_as<String^>(conductor->valasz) + " szerintem a helyes vÃ¡lasz",
+					"Telefonos segÃ­tsÃ©g", MessageBoxButtons::OK,
 					MessageBoxIcon::Information);
 			}
-		}
+		//}
+		button2->Enabled = false;
 		label1->Focus();
 	}
 
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (getKozonseg() == 0)
+		/*if (getKozonseg() == 0)
 		{
-			MessageBox::Show("Ezt a segítséget már elhasználta!",
-				"Hiba lépett fel!", MessageBoxButtons::OK,
+			MessageBox::Show("Ezt a segÃ­tsÃ©get mÃ¡r elhasznÃ¡lta!",
+				"Hiba lÃ©pett fel!", MessageBoxButtons::OK,
 				MessageBoxIcon::Error);
 		}
-		else {
+		else {*/
 			int szint = conductor->nehez;
 			double h_tipp = 0;
 			double rossz = 0;
@@ -964,9 +1694,9 @@ namespace Loimgui {
 				{
 					rossz = getRossz();
 					rossz = rossz - 65;
-					//std::cout << "A közönség szerint a helyes válasz: " << getRossz() << std::endl;
-					MessageBox::Show("A(z) " + BetuSzam2(rossz) + " a helyes válasz\na közönség véleménye szerint",
-						"Közönség segítség", MessageBoxButtons::OK,
+					//std::cout << "A kÃ¶zÃ¶nsÃ©g szerint a helyes vÃ¡lasz: " << getRossz() << std::endl;
+					MessageBox::Show("A(z) " + BetuSzam2(rossz) + " a helyes vÃ¡lasz\na kÃ¶zÃ¶nsÃ©g vÃ©lemÃ©nye szerint",
+						"KÃ¶zÃ¶nsÃ©g segÃ­tsÃ©g", MessageBoxButtons::OK,
 						MessageBoxIcon::Information);
 				}
 				else
@@ -976,9 +1706,9 @@ namespace Loimgui {
 						rossz = rand() % 4;
 						if (BetuSzam(rossz) == (conductor->valasz).at(0))
 						{
-							//std::cout << "A közönség szerint a helyes válasz: " << BetuSzam(rossz) << std::endl;
-							MessageBox::Show("A(z) " + BetuSzam2(rossz) + " a helyes válasz\na közönség véleménye szerint",
-								"Közönség segítség", MessageBoxButtons::OK,
+							//std::cout << "A kÃ¶zÃ¶nsÃ©g szerint a helyes vÃ¡lasz: " << BetuSzam(rossz) << std::endl;
+							MessageBox::Show("A(z) " + BetuSzam2(rossz) + " a helyes vÃ¡lasz\na kÃ¶zÃ¶nsÃ©g vÃ©lemÃ©nye szerint",
+								"KÃ¶zÃ¶nsÃ©g segÃ­tsÃ©g", MessageBoxButtons::OK,
 								MessageBoxIcon::Information);
 							ok = 1;
 						}
@@ -988,12 +1718,13 @@ namespace Loimgui {
 			}
 			else
 			{
-				//std::cout << "A közönség szerint a helyes válasz: " << conductor->valasz << std::endl;
-				MessageBox::Show("A(z) " + marshal_as<String^>(conductor->valasz) + " a helyes válasz\na közönség véleménye szerint",
-					"Közönség segítség", MessageBoxButtons::OK,
+				//std::cout << "A kÃ¶zÃ¶nsÃ©g szerint a helyes vÃ¡lasz: " << conductor->valasz << std::endl;
+				MessageBox::Show("A(z) " + marshal_as<String^>(conductor->valasz) + " a helyes vÃ¡lasz\na kÃ¶zÃ¶nsÃ©g vÃ©lemÃ©nye szerint",
+					"KÃ¶zÃ¶nsÃ©g segÃ­tsÃ©g", MessageBoxButtons::OK,
 					MessageBoxIcon::Information);
 			}
-		}
+		//}
+		button3->Enabled = false;
 		label1->Focus();
 	}
 	};
